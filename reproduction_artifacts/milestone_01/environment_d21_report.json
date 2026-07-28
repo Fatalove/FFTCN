@@ -1,0 +1,36 @@
+{
+  "python": {
+    "version": "3.10.13",
+    "executable": "python",
+    "prefix": "d21",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "packages": {
+    "numpy": "1.22.3",
+    "scipy": "1.10.1",
+    "matplotlib": "3.7.2",
+    "tqdm": "4.68.3",
+    "pyedflib": "0.1.42",
+    "openpyxl": "3.1.5"
+  },
+  "nvidia_driver": {
+    "available": true,
+    "devices": [
+      {
+        "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "driver": "546.30",
+        "memory_mib": 4096
+      }
+    ]
+  },
+  "torch": {
+    "installed": true,
+    "version": "1.12.1",
+    "compiled_cuda_runtime": "11.6",
+    "cuda_available": true,
+    "device_count": 1,
+    "devices": [
+      "NVIDIA GeForce RTX 3050 Laptop GPU"
+    ]
+  }
+}

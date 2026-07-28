@@ -1,0 +1,58 @@
+# GitHub Actions 页面显示的工作流名称。
+name: CPU short tests
+
+# 每当 main 被 push 时自动运行。
+# 本步骤只 push 一次 main，因此发布流程中只会触发一次。
+on:
+  push:
+    branches:
+      - main
+
+# 工作流只需要读取公开源码，不需要写仓库或读取 secret。
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    # 使用 GitHub 提供的 Ubuntu CPU 临时电脑。
+    runs-on: ubuntu-22.04
+
+    # 若安装或测试异常卡住，15 分钟后自动停止，避免无限占用 runner。
+    timeout-minutes: 15
+
+    # 强制 Python 使用 UTF-8，保证中文测试说明和路径正常显示。
+    env:
+      PYTHONUTF8: "1"
+
+    steps:
+      # 第一步：把本次 push 的公开 commit 下载到临时电脑。
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      # 第二步：准备与本项目一致的 Python 3.10。
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
+
+      # 第三步：安装测试所需的固定直接依赖。
+      # torch 使用 CPU wheel；这里不会安装 CUDA，也不会运行训练。
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==1.12.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==1.22.3 scipy==1.10.1 matplotlib==3.7.2 tqdm==4.68.3
+          python -m pip install pyEDFlib==0.1.42 requests==2.31.0 openpyxl==3.1.5
+
+      # 第四步：运行无需 Sleep-EDF 数据的短测试。
+      # CPU 环境会跳过唯一的 CUDA 跨设备恢复测试，其余测试必须通过。
+      - name: Run no-data short tests
+        run: python -m unittest discover -s tests -v
+
+      # 第五步：只检查三个公开命令能否解析参数并显示帮助。
+      # --help 不会下载数据、构建缓存或训练模型。
+      - name: Check public CLI entry points
+        run: |
+          python scripts/download_sleep_edf_153.py --help
+          python scripts/build_sleep_edf_processed.py --help
+          python scripts/run_milestone_09b.py --help

@@ -1,0 +1,70 @@
+{
+  "config": {
+    "data_cache_dir": "datasets\\sleep-edf-153-training-cache-v1",
+    "output_dir": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training",
+    "seed": 0,
+    "offset_samples": 300,
+    "sequence_length": 50,
+    "raw_pretrain_epochs": 1,
+    "wave_pretrain_epochs": 1,
+    "fusion_finetune_epochs": 1,
+    "raw_batch_size": 128,
+    "wave_batch_size": 128,
+    "fusion_batch_size": 32,
+    "pretrain_learning_rate": 1e-05,
+    "fusion_learning_rate": 1e-05,
+    "feature_learning_rate_scale": 0.01,
+    "scheduler_gamma": 0.95,
+    "num_workers": 0,
+    "device": "auto"
+  },
+  "stages": {
+    "raw_pretrain": {
+      "best_checkpoint": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\raw_pretrain\\best.pt",
+      "last_checkpoint": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\raw_pretrain\\last.pt",
+      "history_path": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\raw_pretrain\\history.json",
+      "history": [
+        {
+          "epoch": 0,
+          "learning_rates": [
+            1e-05
+          ],
+          "train_loss": 1.2681844187681046,
+          "validation_loss": 1.4543107576439775
+        }
+      ]
+    },
+    "wave_pretrain": {
+      "best_checkpoint": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\wave_pretrain\\best.pt",
+      "last_checkpoint": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\wave_pretrain\\last.pt",
+      "history_path": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\wave_pretrain\\history.json",
+      "history": [
+        {
+          "epoch": 0,
+          "learning_rates": [
+            1e-05
+          ],
+          "train_loss": 1.0152624534214356,
+          "validation_loss": 0.9607371967492788
+        }
+      ]
+    },
+    "fusion_finetune": {
+      "best_checkpoint": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\fusion_finetune\\best.pt",
+      "last_checkpoint": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\fusion_finetune\\last.pt",
+      "history_path": "reproduction_artifacts\\milestone_09b\\real_run\\preflight_training\\fusion_finetune\\history.json",
+      "history": [
+        {
+          "epoch": 0,
+          "learning_rates": [
+            1e-05,
+            1.0000000000000001e-07,
+            1.0000000000000001e-07
+          ],
+          "train_loss": 1.4246782451808886,
+          "validation_loss": 1.1612338874017307
+        }
+      ]
+    }
+  }
+}

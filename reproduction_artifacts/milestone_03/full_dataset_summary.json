@@ -1,0 +1,2286 @@
+{
+  "dataset": "Sleep-EDF-153 processed v1",
+  "source_root": "datasets\\sleep-edf-expanded-1.0.0\\sleep-cassette",
+  "output_root": "datasets\\sleep-edf-153-processed-v1",
+  "split_seed": 42,
+  "record_count": 153,
+  "subject_count": 78,
+  "epoch_count": 195479,
+  "class_counts": {
+    "0": 65951,
+    "1": 21522,
+    "2": 69132,
+    "3": 13039,
+    "4": 25835
+  },
+  "splits": {
+    "train": {
+      "subjects": [
+        "SC400",
+        "SC403",
+        "SC404",
+        "SC405",
+        "SC406",
+        "SC407",
+        "SC408",
+        "SC409",
+        "SC410",
+        "SC411",
+        "SC412",
+        "SC413",
+        "SC415",
+        "SC416",
+        "SC417",
+        "SC418",
+        "SC419",
+        "SC422",
+        "SC424",
+        "SC425",
+        "SC426",
+        "SC427",
+        "SC428",
+        "SC430",
+        "SC431",
+        "SC432",
+        "SC433",
+        "SC434",
+        "SC435",
+        "SC436",
+        "SC438",
+        "SC440",
+        "SC441",
+        "SC442",
+        "SC443",
+        "SC444",
+        "SC445",
+        "SC446",
+        "SC447",
+        "SC448",
+        "SC449",
+        "SC450",
+        "SC451",
+        "SC454",
+        "SC455",
+        "SC456",
+        "SC457",
+        "SC458",
+        "SC459",
+        "SC462",
+        "SC463",
+        "SC465",
+        "SC466",
+        "SC467",
+        "SC470",
+        "SC472",
+        "SC473",
+        "SC475",
+        "SC477",
+        "SC480",
+        "SC481",
+        "SC482"
+      ],
+      "records": [
+        {
+          "record_id": "SC4001",
+          "subject_id": "SC400",
+          "night_id": "1",
+          "epochs": 841,
+          "class_counts": {
+            "0": 188,
+            "1": 58,
+            "2": 250,
+            "3": 220,
+            "4": 125
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4001.npz"
+        },
+        {
+          "record_id": "SC4002",
+          "subject_id": "SC400",
+          "night_id": "2",
+          "epochs": 1127,
+          "class_counts": {
+            "0": 183,
+            "1": 59,
+            "2": 373,
+            "3": 297,
+            "4": 215
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4002.npz"
+        },
+        {
+          "record_id": "SC4031",
+          "subject_id": "SC403",
+          "night_id": "1",
+          "epochs": 952,
+          "class_counts": {
+            "0": 140,
+            "1": 61,
+            "2": 485,
+            "3": 57,
+            "4": 209
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4031.npz"
+        },
+        {
+          "record_id": "SC4032",
+          "subject_id": "SC403",
+          "night_id": "2",
+          "epochs": 911,
+          "class_counts": {
+            "0": 136,
+            "1": 45,
+            "2": 400,
+            "3": 131,
+            "4": 199
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4032.npz"
+        },
+        {
+          "record_id": "SC4041",
+          "subject_id": "SC404",
+          "night_id": "1",
+          "epochs": 1235,
+          "class_counts": {
+            "0": 200,
+            "1": 166,
+            "2": 620,
+            "3": 53,
+            "4": 196
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4041.npz"
+        },
+        {
+          "record_id": "SC4042",
+          "subject_id": "SC404",
+          "night_id": "2",
+          "epochs": 1200,
+          "class_counts": {
+            "0": 185,
+            "1": 137,
+            "2": 514,
+            "3": 94,
+            "4": 270
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4042.npz"
+        },
+        {
+          "record_id": "SC4051",
+          "subject_id": "SC405",
+          "night_id": "1",
+          "epochs": 672,
+          "class_counts": {
+            "0": 208,
+            "1": 44,
+            "2": 217,
+            "3": 135,
+            "4": 68
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4051.npz"
+        },
+        {
+          "record_id": "SC4052",
+          "subject_id": "SC405",
+          "night_id": "2",
+          "epochs": 1246,
+          "class_counts": {
+            "0": 222,
+            "1": 114,
+            "2": 616,
+            "3": 114,
+            "4": 180
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4052.npz"
+        },
+        {
+          "record_id": "SC4061",
+          "subject_id": "SC406",
+          "night_id": "1",
+          "epochs": 843,
+          "class_counts": {
+            "0": 142,
+            "1": 56,
+            "2": 407,
+            "3": 136,
+            "4": 102
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4061.npz"
+        },
+        {
+          "record_id": "SC4062",
+          "subject_id": "SC406",
+          "night_id": "2",
+          "epochs": 1016,
+          "class_counts": {
+            "0": 193,
+            "1": 90,
+            "2": 417,
+            "3": 129,
+            "4": 187
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4062.npz"
+        },
+        {
+          "record_id": "SC4071",
+          "subject_id": "SC407",
+          "night_id": "1",
+          "epochs": 976,
+          "class_counts": {
+            "0": 124,
+            "1": 89,
+            "2": 403,
+            "3": 162,
+            "4": 198
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4071.npz"
+        },
+        {
+          "record_id": "SC4072",
+          "subject_id": "SC407",
+          "night_id": "2",
+          "epochs": 1273,
+          "class_counts": {
+            "0": 407,
+            "1": 84,
+            "2": 392,
+            "3": 222,
+            "4": 168
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4072.npz"
+        },
+        {
+          "record_id": "SC4081",
+          "subject_id": "SC408",
+          "night_id": "1",
+          "epochs": 1134,
+          "class_counts": {
+            "0": 323,
+            "1": 68,
+            "2": 262,
+            "3": 350,
+            "4": 131
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4081.npz"
+        },
+        {
+          "record_id": "SC4082",
+          "subject_id": "SC408",
+          "night_id": "2",
+          "epochs": 1054,
+          "class_counts": {
+            "0": 144,
+            "1": 39,
+            "2": 329,
+            "3": 282,
+            "4": 260
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4082.npz"
+        },
+        {
+          "record_id": "SC4091",
+          "subject_id": "SC409",
+          "night_id": "1",
+          "epochs": 1132,
+          "class_counts": {
+            "0": 150,
+            "1": 19,
+            "2": 561,
+            "3": 170,
+            "4": 232
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4091.npz"
+        },
+        {
+          "record_id": "SC4092",
+          "subject_id": "SC409",
+          "night_id": "2",
+          "epochs": 1105,
+          "class_counts": {
+            "0": 140,
+            "1": 81,
+            "2": 512,
+            "3": 107,
+            "4": 265
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4092.npz"
+        },
+        {
+          "record_id": "SC4101",
+          "subject_id": "SC410",
+          "night_id": "1",
+          "epochs": 1104,
+          "class_counts": {
+            "0": 155,
+            "1": 65,
+            "2": 671,
+            "3": 6,
+            "4": 207
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4101.npz"
+        },
+        {
+          "record_id": "SC4102",
+          "subject_id": "SC410",
+          "night_id": "2",
+          "epochs": 1092,
+          "class_counts": {
+            "0": 144,
+            "1": 117,
+            "2": 607,
+            "3": 25,
+            "4": 199
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4102.npz"
+        },
+        {
+          "record_id": "SC4111",
+          "subject_id": "SC411",
+          "night_id": "1",
+          "epochs": 928,
+          "class_counts": {
+            "0": 126,
+            "1": 13,
+            "2": 502,
+            "3": 129,
+            "4": 158
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4111.npz"
+        },
+        {
+          "record_id": "SC4112",
+          "subject_id": "SC411",
+          "night_id": "2",
+          "epochs": 802,
+          "class_counts": {
+            "0": 126,
+            "1": 18,
+            "2": 396,
+            "3": 111,
+            "4": 151
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4112.npz"
+        },
+        {
+          "record_id": "SC4121",
+          "subject_id": "SC412",
+          "night_id": "1",
+          "epochs": 1052,
+          "class_counts": {
+            "0": 176,
+            "1": 48,
+            "2": 463,
+            "3": 107,
+            "4": 258
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4121.npz"
+        },
+        {
+          "record_id": "SC4122",
+          "subject_id": "SC412",
+          "night_id": "2",
+          "epochs": 977,
+          "class_counts": {
+            "0": 290,
+            "1": 121,
+            "2": 287,
+            "3": 80,
+            "4": 199
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4122.npz"
+        },
+        {
+          "record_id": "SC4131",
+          "subject_id": "SC413",
+          "night_id": "1",
+          "epochs": 1028,
+          "class_counts": {
+            "0": 155,
+            "1": 57,
+            "2": 497,
+            "3": 147,
+            "4": 172
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4131.npz"
+        },
+        {
+          "record_id": "SC4151",
+          "subject_id": "SC415",
+          "night_id": "1",
+          "epochs": 952,
+          "class_counts": {
+            "0": 172,
+            "1": 41,
+            "2": 354,
+            "3": 177,
+            "4": 208
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4151.npz"
+        },
+        {
+          "record_id": "SC4152",
+          "subject_id": "SC415",
+          "night_id": "2",
+          "epochs": 1762,
+          "class_counts": {
+            "0": 807,
+            "1": 47,
+            "2": 438,
+            "3": 178,
+            "4": 292
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4152.npz"
+        },
+        {
+          "record_id": "SC4161",
+          "subject_id": "SC416",
+          "night_id": "1",
+          "epochs": 1144,
+          "class_counts": {
+            "0": 216,
+            "1": 55,
+            "2": 448,
+            "3": 165,
+            "4": 260
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4161.npz"
+        },
+        {
+          "record_id": "SC4162",
+          "subject_id": "SC416",
+          "night_id": "2",
+          "epochs": 1003,
+          "class_counts": {
+            "0": 179,
+            "1": 42,
+            "2": 459,
+            "3": 128,
+            "4": 195
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4162.npz"
+        },
+        {
+          "record_id": "SC4171",
+          "subject_id": "SC417",
+          "night_id": "1",
+          "epochs": 1002,
+          "class_counts": {
+            "0": 176,
+            "1": 21,
+            "2": 328,
+            "3": 215,
+            "4": 262
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4171.npz"
+        },
+        {
+          "record_id": "SC4172",
+          "subject_id": "SC417",
+          "night_id": "2",
+          "epochs": 1773,
+          "class_counts": {
+            "0": 689,
+            "1": 44,
+            "2": 687,
+            "3": 188,
+            "4": 165
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4172.npz"
+        },
+        {
+          "record_id": "SC4181",
+          "subject_id": "SC418",
+          "night_id": "1",
+          "epochs": 964,
+          "class_counts": {
+            "0": 138,
+            "1": 29,
+            "2": 388,
+            "3": 291,
+            "4": 118
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4181.npz"
+        },
+        {
+          "record_id": "SC4182",
+          "subject_id": "SC418",
+          "night_id": "2",
+          "epochs": 920,
+          "class_counts": {
+            "0": 147,
+            "1": 151,
+            "2": 290,
+            "3": 216,
+            "4": 116
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4182.npz"
+        },
+        {
+          "record_id": "SC4191",
+          "subject_id": "SC419",
+          "night_id": "1",
+          "epochs": 1535,
+          "class_counts": {
+            "0": 188,
+            "1": 118,
+            "2": 833,
+            "3": 110,
+            "4": 286
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4191.npz"
+        },
+        {
+          "record_id": "SC4192",
+          "subject_id": "SC419",
+          "night_id": "2",
+          "epochs": 1274,
+          "class_counts": {
+            "0": 376,
+            "1": 72,
+            "2": 434,
+            "3": 60,
+            "4": 332
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4192.npz"
+        },
+        {
+          "record_id": "SC4221",
+          "subject_id": "SC422",
+          "night_id": "1",
+          "epochs": 1099,
+          "class_counts": {
+            "0": 173,
+            "1": 221,
+            "2": 461,
+            "3": 62,
+            "4": 182
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4221.npz"
+        },
+        {
+          "record_id": "SC4222",
+          "subject_id": "SC422",
+          "night_id": "2",
+          "epochs": 1108,
+          "class_counts": {
+            "0": 167,
+            "1": 90,
+            "2": 497,
+            "3": 134,
+            "4": 220
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4222.npz"
+        },
+        {
+          "record_id": "SC4241",
+          "subject_id": "SC424",
+          "night_id": "1",
+          "epochs": 1673,
+          "class_counts": {
+            "0": 846,
+            "1": 85,
+            "2": 514,
+            "3": 44,
+            "4": 184
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4241.npz"
+        },
+        {
+          "record_id": "SC4242",
+          "subject_id": "SC424",
+          "night_id": "2",
+          "epochs": 1775,
+          "class_counts": {
+            "0": 944,
+            "1": 94,
+            "2": 556,
+            "3": 5,
+            "4": 176
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4242.npz"
+        },
+        {
+          "record_id": "SC4251",
+          "subject_id": "SC425",
+          "night_id": "1",
+          "epochs": 972,
+          "class_counts": {
+            "0": 133,
+            "1": 102,
+            "2": 569,
+            "3": 22,
+            "4": 146
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4251.npz"
+        },
+        {
+          "record_id": "SC4252",
+          "subject_id": "SC425",
+          "night_id": "2",
+          "epochs": 1020,
+          "class_counts": {
+            "0": 210,
+            "1": 113,
+            "2": 425,
+            "3": 98,
+            "4": 174
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4252.npz"
+        },
+        {
+          "record_id": "SC4261",
+          "subject_id": "SC426",
+          "night_id": "1",
+          "epochs": 1597,
+          "class_counts": {
+            "0": 627,
+            "1": 245,
+            "2": 405,
+            "3": 94,
+            "4": 226
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4261.npz"
+        },
+        {
+          "record_id": "SC4262",
+          "subject_id": "SC426",
+          "night_id": "2",
+          "epochs": 980,
+          "class_counts": {
+            "0": 167,
+            "1": 77,
+            "2": 464,
+            "3": 79,
+            "4": 193
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4262.npz"
+        },
+        {
+          "record_id": "SC4271",
+          "subject_id": "SC427",
+          "night_id": "1",
+          "epochs": 1052,
+          "class_counts": {
+            "0": 168,
+            "1": 72,
+            "2": 475,
+            "3": 163,
+            "4": 174
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4271.npz"
+        },
+        {
+          "record_id": "SC4272",
+          "subject_id": "SC427",
+          "night_id": "2",
+          "epochs": 1090,
+          "class_counts": {
+            "0": 223,
+            "1": 87,
+            "2": 379,
+            "3": 178,
+            "4": 223
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4272.npz"
+        },
+        {
+          "record_id": "SC4281",
+          "subject_id": "SC428",
+          "night_id": "1",
+          "epochs": 1127,
+          "class_counts": {
+            "0": 193,
+            "1": 76,
+            "2": 530,
+            "3": 159,
+            "4": 169
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4281.npz"
+        },
+        {
+          "record_id": "SC4282",
+          "subject_id": "SC428",
+          "night_id": "2",
+          "epochs": 1070,
+          "class_counts": {
+            "0": 204,
+            "1": 81,
+            "2": 474,
+            "3": 145,
+            "4": 166
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4282.npz"
+        },
+        {
+          "record_id": "SC4301",
+          "subject_id": "SC430",
+          "night_id": "1",
+          "epochs": 929,
+          "class_counts": {
+            "0": 211,
+            "1": 109,
+            "2": 457,
+            "3": 30,
+            "4": 122
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4301.npz"
+        },
+        {
+          "record_id": "SC4302",
+          "subject_id": "SC430",
+          "night_id": "2",
+          "epochs": 854,
+          "class_counts": {
+            "0": 173,
+            "1": 96,
+            "2": 418,
+            "3": 32,
+            "4": 135
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4302.npz"
+        },
+        {
+          "record_id": "SC4311",
+          "subject_id": "SC431",
+          "night_id": "1",
+          "epochs": 1054,
+          "class_counts": {
+            "0": 358,
+            "1": 79,
+            "2": 362,
+            "3": 113,
+            "4": 142
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4311.npz"
+        },
+        {
+          "record_id": "SC4312",
+          "subject_id": "SC431",
+          "night_id": "2",
+          "epochs": 1181,
+          "class_counts": {
+            "0": 313,
+            "1": 152,
+            "2": 334,
+            "3": 191,
+            "4": 191
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4312.npz"
+        },
+        {
+          "record_id": "SC4321",
+          "subject_id": "SC432",
+          "night_id": "1",
+          "epochs": 1560,
+          "class_counts": {
+            "0": 646,
+            "1": 204,
+            "2": 424,
+            "3": 0,
+            "4": 286
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4321.npz"
+        },
+        {
+          "record_id": "SC4322",
+          "subject_id": "SC432",
+          "night_id": "2",
+          "epochs": 1021,
+          "class_counts": {
+            "0": 160,
+            "1": 144,
+            "2": 475,
+            "3": 1,
+            "4": 241
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4322.npz"
+        },
+        {
+          "record_id": "SC4331",
+          "subject_id": "SC433",
+          "night_id": "1",
+          "epochs": 1888,
+          "class_counts": {
+            "0": 1055,
+            "1": 212,
+            "2": 453,
+            "3": 0,
+            "4": 168
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4331.npz"
+        },
+        {
+          "record_id": "SC4332",
+          "subject_id": "SC433",
+          "night_id": "2",
+          "epochs": 1312,
+          "class_counts": {
+            "0": 435,
+            "1": 91,
+            "2": 648,
+            "3": 0,
+            "4": 138
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4332.npz"
+        },
+        {
+          "record_id": "SC4341",
+          "subject_id": "SC434",
+          "night_id": "1",
+          "epochs": 1501,
+          "class_counts": {
+            "0": 618,
+            "1": 150,
+            "2": 561,
+            "3": 0,
+            "4": 172
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4341.npz"
+        },
+        {
+          "record_id": "SC4342",
+          "subject_id": "SC434",
+          "night_id": "2",
+          "epochs": 1582,
+          "class_counts": {
+            "0": 684,
+            "1": 136,
+            "2": 596,
+            "3": 0,
+            "4": 166
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4342.npz"
+        },
+        {
+          "record_id": "SC4351",
+          "subject_id": "SC435",
+          "night_id": "1",
+          "epochs": 976,
+          "class_counts": {
+            "0": 351,
+            "1": 78,
+            "2": 419,
+            "3": 104,
+            "4": 24
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4351.npz"
+        },
+        {
+          "record_id": "SC4352",
+          "subject_id": "SC435",
+          "night_id": "2",
+          "epochs": 963,
+          "class_counts": {
+            "0": 222,
+            "1": 66,
+            "2": 498,
+            "3": 105,
+            "4": 72
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4352.npz"
+        },
+        {
+          "record_id": "SC4362",
+          "subject_id": "SC436",
+          "night_id": "2",
+          "epochs": 824,
+          "class_counts": {
+            "0": 156,
+            "1": 53,
+            "2": 499,
+            "3": 48,
+            "4": 68
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4362.npz"
+        },
+        {
+          "record_id": "SC4381",
+          "subject_id": "SC438",
+          "night_id": "1",
+          "epochs": 1776,
+          "class_counts": {
+            "0": 893,
+            "1": 95,
+            "2": 612,
+            "3": 16,
+            "4": 160
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4381.npz"
+        },
+        {
+          "record_id": "SC4382",
+          "subject_id": "SC438",
+          "night_id": "2",
+          "epochs": 1871,
+          "class_counts": {
+            "0": 979,
+            "1": 103,
+            "2": 583,
+            "3": 37,
+            "4": 169
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4382.npz"
+        },
+        {
+          "record_id": "SC4401",
+          "subject_id": "SC440",
+          "night_id": "1",
+          "epochs": 1064,
+          "class_counts": {
+            "0": 410,
+            "1": 163,
+            "2": 377,
+            "3": 4,
+            "4": 110
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4401.npz"
+        },
+        {
+          "record_id": "SC4402",
+          "subject_id": "SC440",
+          "night_id": "2",
+          "epochs": 1072,
+          "class_counts": {
+            "0": 209,
+            "1": 92,
+            "2": 375,
+            "3": 142,
+            "4": 254
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4402.npz"
+        },
+        {
+          "record_id": "SC4411",
+          "subject_id": "SC441",
+          "night_id": "1",
+          "epochs": 1078,
+          "class_counts": {
+            "0": 181,
+            "1": 145,
+            "2": 502,
+            "3": 46,
+            "4": 204
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4411.npz"
+        },
+        {
+          "record_id": "SC4412",
+          "subject_id": "SC441",
+          "night_id": "2",
+          "epochs": 924,
+          "class_counts": {
+            "0": 178,
+            "1": 64,
+            "2": 356,
+            "3": 226,
+            "4": 100
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4412.npz"
+        },
+        {
+          "record_id": "SC4421",
+          "subject_id": "SC442",
+          "night_id": "1",
+          "epochs": 785,
+          "class_counts": {
+            "0": 147,
+            "1": 34,
+            "2": 283,
+            "3": 163,
+            "4": 158
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4421.npz"
+        },
+        {
+          "record_id": "SC4422",
+          "subject_id": "SC442",
+          "night_id": "2",
+          "epochs": 884,
+          "class_counts": {
+            "0": 215,
+            "1": 159,
+            "2": 298,
+            "3": 124,
+            "4": 88
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4422.npz"
+        },
+        {
+          "record_id": "SC4431",
+          "subject_id": "SC443",
+          "night_id": "1",
+          "epochs": 699,
+          "class_counts": {
+            "0": 142,
+            "1": 63,
+            "2": 331,
+            "3": 82,
+            "4": 81
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4431.npz"
+        },
+        {
+          "record_id": "SC4432",
+          "subject_id": "SC443",
+          "night_id": "2",
+          "epochs": 962,
+          "class_counts": {
+            "0": 150,
+            "1": 41,
+            "2": 430,
+            "3": 144,
+            "4": 197
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4432.npz"
+        },
+        {
+          "record_id": "SC4441",
+          "subject_id": "SC444",
+          "night_id": "1",
+          "epochs": 1195,
+          "class_counts": {
+            "0": 416,
+            "1": 183,
+            "2": 405,
+            "3": 91,
+            "4": 100
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4441.npz"
+        },
+        {
+          "record_id": "SC4442",
+          "subject_id": "SC444",
+          "night_id": "2",
+          "epochs": 1092,
+          "class_counts": {
+            "0": 282,
+            "1": 92,
+            "2": 530,
+            "3": 92,
+            "4": 96
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4442.npz"
+        },
+        {
+          "record_id": "SC4451",
+          "subject_id": "SC445",
+          "night_id": "1",
+          "epochs": 1208,
+          "class_counts": {
+            "0": 269,
+            "1": 235,
+            "2": 258,
+            "3": 307,
+            "4": 139
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4451.npz"
+        },
+        {
+          "record_id": "SC4452",
+          "subject_id": "SC445",
+          "night_id": "2",
+          "epochs": 1166,
+          "class_counts": {
+            "0": 191,
+            "1": 162,
+            "2": 358,
+            "3": 267,
+            "4": 188
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4452.npz"
+        },
+        {
+          "record_id": "SC4461",
+          "subject_id": "SC446",
+          "night_id": "1",
+          "epochs": 983,
+          "class_counts": {
+            "0": 196,
+            "1": 118,
+            "2": 484,
+            "3": 9,
+            "4": 176
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4461.npz"
+        },
+        {
+          "record_id": "SC4462",
+          "subject_id": "SC446",
+          "night_id": "2",
+          "epochs": 1022,
+          "class_counts": {
+            "0": 147,
+            "1": 198,
+            "2": 472,
+            "3": 19,
+            "4": 186
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4462.npz"
+        },
+        {
+          "record_id": "SC4471",
+          "subject_id": "SC447",
+          "night_id": "1",
+          "epochs": 1187,
+          "class_counts": {
+            "0": 365,
+            "1": 78,
+            "2": 349,
+            "3": 275,
+            "4": 120
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4471.npz"
+        },
+        {
+          "record_id": "SC4472",
+          "subject_id": "SC447",
+          "night_id": "2",
+          "epochs": 2161,
+          "class_counts": {
+            "0": 1437,
+            "1": 161,
+            "2": 299,
+            "3": 144,
+            "4": 120
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4472.npz"
+        },
+        {
+          "record_id": "SC4481",
+          "subject_id": "SC448",
+          "night_id": "1",
+          "epochs": 2027,
+          "class_counts": {
+            "0": 926,
+            "1": 299,
+            "2": 471,
+            "3": 95,
+            "4": 236
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4481.npz"
+        },
+        {
+          "record_id": "SC4482",
+          "subject_id": "SC448",
+          "night_id": "2",
+          "epochs": 1910,
+          "class_counts": {
+            "0": 968,
+            "1": 146,
+            "2": 520,
+            "3": 116,
+            "4": 160
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4482.npz"
+        },
+        {
+          "record_id": "SC4491",
+          "subject_id": "SC449",
+          "night_id": "1",
+          "epochs": 1101,
+          "class_counts": {
+            "0": 210,
+            "1": 149,
+            "2": 512,
+            "3": 14,
+            "4": 216
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4491.npz"
+        },
+        {
+          "record_id": "SC4492",
+          "subject_id": "SC449",
+          "night_id": "2",
+          "epochs": 1040,
+          "class_counts": {
+            "0": 307,
+            "1": 157,
+            "2": 416,
+            "3": 27,
+            "4": 133
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4492.npz"
+        },
+        {
+          "record_id": "SC4501",
+          "subject_id": "SC450",
+          "night_id": "1",
+          "epochs": 1326,
+          "class_counts": {
+            "0": 539,
+            "1": 190,
+            "2": 402,
+            "3": 2,
+            "4": 193
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4501.npz"
+        },
+        {
+          "record_id": "SC4502",
+          "subject_id": "SC450",
+          "night_id": "2",
+          "epochs": 1103,
+          "class_counts": {
+            "0": 299,
+            "1": 78,
+            "2": 493,
+            "3": 42,
+            "4": 191
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4502.npz"
+        },
+        {
+          "record_id": "SC4511",
+          "subject_id": "SC451",
+          "night_id": "1",
+          "epochs": 1087,
+          "class_counts": {
+            "0": 151,
+            "1": 409,
+            "2": 398,
+            "3": 3,
+            "4": 126
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4511.npz"
+        },
+        {
+          "record_id": "SC4512",
+          "subject_id": "SC451",
+          "night_id": "2",
+          "epochs": 954,
+          "class_counts": {
+            "0": 226,
+            "1": 179,
+            "2": 435,
+            "3": 2,
+            "4": 112
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4512.npz"
+        },
+        {
+          "record_id": "SC4541",
+          "subject_id": "SC454",
+          "night_id": "1",
+          "epochs": 1716,
+          "class_counts": {
+            "0": 820,
+            "1": 199,
+            "2": 557,
+            "3": 5,
+            "4": 135
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4541.npz"
+        },
+        {
+          "record_id": "SC4542",
+          "subject_id": "SC454",
+          "night_id": "2",
+          "epochs": 1148,
+          "class_counts": {
+            "0": 281,
+            "1": 208,
+            "2": 461,
+            "3": 78,
+            "4": 120
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4542.npz"
+        },
+        {
+          "record_id": "SC4551",
+          "subject_id": "SC455",
+          "night_id": "1",
+          "epochs": 1047,
+          "class_counts": {
+            "0": 314,
+            "1": 91,
+            "2": 487,
+            "3": 48,
+            "4": 107
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4551.npz"
+        },
+        {
+          "record_id": "SC4552",
+          "subject_id": "SC455",
+          "night_id": "2",
+          "epochs": 1090,
+          "class_counts": {
+            "0": 334,
+            "1": 115,
+            "2": 395,
+            "3": 1,
+            "4": 245
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4552.npz"
+        },
+        {
+          "record_id": "SC4561",
+          "subject_id": "SC456",
+          "night_id": "1",
+          "epochs": 1237,
+          "class_counts": {
+            "0": 281,
+            "1": 521,
+            "2": 272,
+            "3": 50,
+            "4": 113
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4561.npz"
+        },
+        {
+          "record_id": "SC4562",
+          "subject_id": "SC456",
+          "night_id": "2",
+          "epochs": 1148,
+          "class_counts": {
+            "0": 283,
+            "1": 365,
+            "2": 335,
+            "3": 28,
+            "4": 137
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4562.npz"
+        },
+        {
+          "record_id": "SC4571",
+          "subject_id": "SC457",
+          "night_id": "1",
+          "epochs": 1236,
+          "class_counts": {
+            "0": 287,
+            "1": 186,
+            "2": 513,
+            "3": 0,
+            "4": 250
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4571.npz"
+        },
+        {
+          "record_id": "SC4572",
+          "subject_id": "SC457",
+          "night_id": "2",
+          "epochs": 1095,
+          "class_counts": {
+            "0": 175,
+            "1": 104,
+            "2": 569,
+            "3": 29,
+            "4": 218
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4572.npz"
+        },
+        {
+          "record_id": "SC4581",
+          "subject_id": "SC458",
+          "night_id": "1",
+          "epochs": 1095,
+          "class_counts": {
+            "0": 194,
+            "1": 152,
+            "2": 578,
+            "3": 10,
+            "4": 161
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4581.npz"
+        },
+        {
+          "record_id": "SC4582",
+          "subject_id": "SC458",
+          "night_id": "2",
+          "epochs": 1175,
+          "class_counts": {
+            "0": 345,
+            "1": 195,
+            "2": 543,
+            "3": 6,
+            "4": 86
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4582.npz"
+        },
+        {
+          "record_id": "SC4591",
+          "subject_id": "SC459",
+          "night_id": "1",
+          "epochs": 1840,
+          "class_counts": {
+            "0": 863,
+            "1": 199,
+            "2": 363,
+            "3": 157,
+            "4": 258
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4591.npz"
+        },
+        {
+          "record_id": "SC4592",
+          "subject_id": "SC459",
+          "night_id": "2",
+          "epochs": 1231,
+          "class_counts": {
+            "0": 504,
+            "1": 194,
+            "2": 277,
+            "3": 101,
+            "4": 155
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4592.npz"
+        },
+        {
+          "record_id": "SC4621",
+          "subject_id": "SC462",
+          "night_id": "1",
+          "epochs": 1445,
+          "class_counts": {
+            "0": 332,
+            "1": 276,
+            "2": 745,
+            "3": 14,
+            "4": 78
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4621.npz"
+        },
+        {
+          "record_id": "SC4622",
+          "subject_id": "SC462",
+          "night_id": "2",
+          "epochs": 1823,
+          "class_counts": {
+            "0": 926,
+            "1": 347,
+            "2": 431,
+            "3": 4,
+            "4": 115
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4622.npz"
+        },
+        {
+          "record_id": "SC4631",
+          "subject_id": "SC463",
+          "night_id": "1",
+          "epochs": 1063,
+          "class_counts": {
+            "0": 292,
+            "1": 131,
+            "2": 481,
+            "3": 39,
+            "4": 120
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4631.npz"
+        },
+        {
+          "record_id": "SC4632",
+          "subject_id": "SC463",
+          "night_id": "2",
+          "epochs": 1107,
+          "class_counts": {
+            "0": 224,
+            "1": 157,
+            "2": 558,
+            "3": 28,
+            "4": 140
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4632.npz"
+        },
+        {
+          "record_id": "SC4651",
+          "subject_id": "SC465",
+          "night_id": "1",
+          "epochs": 2644,
+          "class_counts": {
+            "0": 1424,
+            "1": 100,
+            "2": 821,
+            "3": 140,
+            "4": 159
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4651.npz"
+        },
+        {
+          "record_id": "SC4652",
+          "subject_id": "SC465",
+          "night_id": "2",
+          "epochs": 1929,
+          "class_counts": {
+            "0": 865,
+            "1": 204,
+            "2": 463,
+            "3": 186,
+            "4": 211
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4652.npz"
+        },
+        {
+          "record_id": "SC4661",
+          "subject_id": "SC466",
+          "night_id": "1",
+          "epochs": 2026,
+          "class_counts": {
+            "0": 1079,
+            "1": 375,
+            "2": 422,
+            "3": 40,
+            "4": 110
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4661.npz"
+        },
+        {
+          "record_id": "SC4662",
+          "subject_id": "SC466",
+          "night_id": "2",
+          "epochs": 1994,
+          "class_counts": {
+            "0": 1017,
+            "1": 235,
+            "2": 414,
+            "3": 78,
+            "4": 250
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4662.npz"
+        },
+        {
+          "record_id": "SC4671",
+          "subject_id": "SC467",
+          "night_id": "1",
+          "epochs": 1968,
+          "class_counts": {
+            "0": 939,
+            "1": 356,
+            "2": 507,
+            "3": 17,
+            "4": 149
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4671.npz"
+        },
+        {
+          "record_id": "SC4672",
+          "subject_id": "SC467",
+          "night_id": "2",
+          "epochs": 1021,
+          "class_counts": {
+            "0": 345,
+            "1": 213,
+            "2": 339,
+            "3": 29,
+            "4": 95
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4672.npz"
+        },
+        {
+          "record_id": "SC4701",
+          "subject_id": "SC470",
+          "night_id": "1",
+          "epochs": 1717,
+          "class_counts": {
+            "0": 736,
+            "1": 143,
+            "2": 698,
+            "3": 35,
+            "4": 105
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4701.npz"
+        },
+        {
+          "record_id": "SC4702",
+          "subject_id": "SC470",
+          "night_id": "2",
+          "epochs": 1515,
+          "class_counts": {
+            "0": 707,
+            "1": 233,
+            "2": 444,
+            "3": 33,
+            "4": 98
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4702.npz"
+        },
+        {
+          "record_id": "SC4721",
+          "subject_id": "SC472",
+          "night_id": "1",
+          "epochs": 1031,
+          "class_counts": {
+            "0": 257,
+            "1": 259,
+            "2": 341,
+            "3": 0,
+            "4": 174
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4721.npz"
+        },
+        {
+          "record_id": "SC4722",
+          "subject_id": "SC472",
+          "night_id": "2",
+          "epochs": 1130,
+          "class_counts": {
+            "0": 310,
+            "1": 240,
+            "2": 444,
+            "3": 0,
+            "4": 136
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4722.npz"
+        },
+        {
+          "record_id": "SC4731",
+          "subject_id": "SC473",
+          "night_id": "1",
+          "epochs": 2667,
+          "class_counts": {
+            "0": 1840,
+            "1": 222,
+            "2": 470,
+            "3": 0,
+            "4": 135
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4731.npz"
+        },
+        {
+          "record_id": "SC4732",
+          "subject_id": "SC473",
+          "night_id": "2",
+          "epochs": 2318,
+          "class_counts": {
+            "0": 1349,
+            "1": 470,
+            "2": 363,
+            "3": 0,
+            "4": 136
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4732.npz"
+        },
+        {
+          "record_id": "SC4751",
+          "subject_id": "SC475",
+          "night_id": "1",
+          "epochs": 2044,
+          "class_counts": {
+            "0": 1428,
+            "1": 102,
+            "2": 467,
+            "3": 0,
+            "4": 47
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4751.npz"
+        },
+        {
+          "record_id": "SC4752",
+          "subject_id": "SC475",
+          "night_id": "2",
+          "epochs": 1049,
+          "class_counts": {
+            "0": 378,
+            "1": 143,
+            "2": 436,
+            "3": 20,
+            "4": 72
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4752.npz"
+        },
+        {
+          "record_id": "SC4771",
+          "subject_id": "SC477",
+          "night_id": "1",
+          "epochs": 1325,
+          "class_counts": {
+            "0": 402,
+            "1": 348,
+            "2": 461,
+            "3": 5,
+            "4": 109
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4771.npz"
+        },
+        {
+          "record_id": "SC4772",
+          "subject_id": "SC477",
+          "night_id": "2",
+          "epochs": 1324,
+          "class_counts": {
+            "0": 753,
+            "1": 111,
+            "2": 240,
+            "3": 87,
+            "4": 133
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4772.npz"
+        },
+        {
+          "record_id": "SC4801",
+          "subject_id": "SC480",
+          "night_id": "1",
+          "epochs": 1241,
+          "class_counts": {
+            "0": 288,
+            "1": 203,
+            "2": 595,
+            "3": 13,
+            "4": 142
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4801.npz"
+        },
+        {
+          "record_id": "SC4802",
+          "subject_id": "SC480",
+          "night_id": "2",
+          "epochs": 1229,
+          "class_counts": {
+            "0": 342,
+            "1": 204,
+            "2": 541,
+            "3": 6,
+            "4": 136
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4802.npz"
+        },
+        {
+          "record_id": "SC4811",
+          "subject_id": "SC481",
+          "night_id": "1",
+          "epochs": 1293,
+          "class_counts": {
+            "0": 360,
+            "1": 88,
+            "2": 528,
+            "3": 121,
+            "4": 196
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4811.npz"
+        },
+        {
+          "record_id": "SC4812",
+          "subject_id": "SC481",
+          "night_id": "2",
+          "epochs": 1183,
+          "class_counts": {
+            "0": 458,
+            "1": 138,
+            "2": 347,
+            "3": 102,
+            "4": 138
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4812.npz"
+        },
+        {
+          "record_id": "SC4821",
+          "subject_id": "SC482",
+          "night_id": "1",
+          "epochs": 1704,
+          "class_counts": {
+            "0": 841,
+            "1": 66,
+            "2": 407,
+            "3": 162,
+            "4": 228
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4821.npz"
+        },
+        {
+          "record_id": "SC4822",
+          "subject_id": "SC482",
+          "night_id": "2",
+          "epochs": 1366,
+          "class_counts": {
+            "0": 510,
+            "1": 121,
+            "2": 400,
+            "3": 156,
+            "4": 179
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\train\\SC4822.npz"
+        }
+      ],
+      "epoch_count": 154128,
+      "class_counts": {
+        "0": 50298,
+        "1": 16989,
+        "2": 55395,
+        "3": 11116,
+        "4": 20330
+      },
+      "subject_count": 62,
+      "record_count": 122
+    },
+    "validation": {
+      "subjects": [
+        "SC401",
+        "SC429",
+        "SC437",
+        "SC453",
+        "SC460",
+        "SC464",
+        "SC471",
+        "SC476"
+      ],
+      "records": [
+        {
+          "record_id": "SC4011",
+          "subject_id": "SC401",
+          "night_id": "1",
+          "epochs": 1103,
+          "class_counts": {
+            "0": 157,
+            "1": 109,
+            "2": 562,
+            "3": 105,
+            "4": 170
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4011.npz"
+        },
+        {
+          "record_id": "SC4012",
+          "subject_id": "SC401",
+          "night_id": "2",
+          "epochs": 1186,
+          "class_counts": {
+            "0": 162,
+            "1": 92,
+            "2": 660,
+            "3": 96,
+            "4": 176
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4012.npz"
+        },
+        {
+          "record_id": "SC4291",
+          "subject_id": "SC429",
+          "night_id": "1",
+          "epochs": 1131,
+          "class_counts": {
+            "0": 244,
+            "1": 181,
+            "2": 427,
+            "3": 104,
+            "4": 175
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4291.npz"
+        },
+        {
+          "record_id": "SC4292",
+          "subject_id": "SC429",
+          "night_id": "2",
+          "epochs": 1605,
+          "class_counts": {
+            "0": 733,
+            "1": 49,
+            "2": 457,
+            "3": 146,
+            "4": 220
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4292.npz"
+        },
+        {
+          "record_id": "SC4371",
+          "subject_id": "SC437",
+          "night_id": "1",
+          "epochs": 918,
+          "class_counts": {
+            "0": 144,
+            "1": 234,
+            "2": 484,
+            "3": 11,
+            "4": 45
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4371.npz"
+        },
+        {
+          "record_id": "SC4372",
+          "subject_id": "SC437",
+          "night_id": "2",
+          "epochs": 1509,
+          "class_counts": {
+            "0": 682,
+            "1": 282,
+            "2": 433,
+            "3": 6,
+            "4": 106
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4372.npz"
+        },
+        {
+          "record_id": "SC4531",
+          "subject_id": "SC453",
+          "night_id": "1",
+          "epochs": 1096,
+          "class_counts": {
+            "0": 242,
+            "1": 124,
+            "2": 465,
+            "3": 85,
+            "4": 180
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4531.npz"
+        },
+        {
+          "record_id": "SC4532",
+          "subject_id": "SC453",
+          "night_id": "2",
+          "epochs": 1056,
+          "class_counts": {
+            "0": 175,
+            "1": 147,
+            "2": 543,
+            "3": 21,
+            "4": 170
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4532.npz"
+        },
+        {
+          "record_id": "SC4601",
+          "subject_id": "SC460",
+          "night_id": "1",
+          "epochs": 1349,
+          "class_counts": {
+            "0": 601,
+            "1": 38,
+            "2": 252,
+            "3": 288,
+            "4": 170
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4601.npz"
+        },
+        {
+          "record_id": "SC4602",
+          "subject_id": "SC460",
+          "night_id": "2",
+          "epochs": 2043,
+          "class_counts": {
+            "0": 1111,
+            "1": 223,
+            "2": 264,
+            "3": 196,
+            "4": 249
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4602.npz"
+        },
+        {
+          "record_id": "SC4641",
+          "subject_id": "SC464",
+          "night_id": "1",
+          "epochs": 1271,
+          "class_counts": {
+            "0": 632,
+            "1": 179,
+            "2": 382,
+            "3": 0,
+            "4": 78
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4641.npz"
+        },
+        {
+          "record_id": "SC4642",
+          "subject_id": "SC464",
+          "night_id": "2",
+          "epochs": 2049,
+          "class_counts": {
+            "0": 1161,
+            "1": 243,
+            "2": 518,
+            "3": 0,
+            "4": 127
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4642.npz"
+        },
+        {
+          "record_id": "SC4711",
+          "subject_id": "SC471",
+          "night_id": "1",
+          "epochs": 1413,
+          "class_counts": {
+            "0": 452,
+            "1": 234,
+            "2": 605,
+            "3": 4,
+            "4": 118
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4711.npz"
+        },
+        {
+          "record_id": "SC4712",
+          "subject_id": "SC471",
+          "night_id": "2",
+          "epochs": 1241,
+          "class_counts": {
+            "0": 430,
+            "1": 230,
+            "2": 446,
+            "3": 0,
+            "4": 135
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4712.npz"
+        },
+        {
+          "record_id": "SC4761",
+          "subject_id": "SC476",
+          "night_id": "1",
+          "epochs": 1683,
+          "class_counts": {
+            "0": 1069,
+            "1": 127,
+            "2": 425,
+            "3": 27,
+            "4": 35
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4761.npz"
+        },
+        {
+          "record_id": "SC4762",
+          "subject_id": "SC476",
+          "night_id": "2",
+          "epochs": 2662,
+          "class_counts": {
+            "0": 1839,
+            "1": 161,
+            "2": 268,
+            "3": 0,
+            "4": 394
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\validation\\SC4762.npz"
+        }
+      ],
+      "epoch_count": 23315,
+      "class_counts": {
+        "0": 9834,
+        "1": 2653,
+        "2": 7191,
+        "3": 1089,
+        "4": 2548
+      },
+      "subject_count": 8,
+      "record_count": 16
+    },
+    "test": {
+      "subjects": [
+        "SC402",
+        "SC414",
+        "SC420",
+        "SC421",
+        "SC423",
+        "SC452",
+        "SC461",
+        "SC474"
+      ],
+      "records": [
+        {
+          "record_id": "SC4021",
+          "subject_id": "SC402",
+          "night_id": "1",
+          "epochs": 1025,
+          "class_counts": {
+            "0": 128,
+            "1": 94,
+            "2": 545,
+            "3": 95,
+            "4": 163
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4021.npz"
+        },
+        {
+          "record_id": "SC4022",
+          "subject_id": "SC402",
+          "night_id": "2",
+          "epochs": 1009,
+          "class_counts": {
+            "0": 125,
+            "1": 184,
+            "2": 402,
+            "3": 119,
+            "4": 179
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4022.npz"
+        },
+        {
+          "record_id": "SC4141",
+          "subject_id": "SC414",
+          "night_id": "1",
+          "epochs": 1004,
+          "class_counts": {
+            "0": 187,
+            "1": 29,
+            "2": 404,
+            "3": 151,
+            "4": 233
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4141.npz"
+        },
+        {
+          "record_id": "SC4142",
+          "subject_id": "SC414",
+          "night_id": "2",
+          "epochs": 952,
+          "class_counts": {
+            "0": 181,
+            "1": 27,
+            "2": 386,
+            "3": 145,
+            "4": 213
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4142.npz"
+        },
+        {
+          "record_id": "SC4201",
+          "subject_id": "SC420",
+          "night_id": "1",
+          "epochs": 1022,
+          "class_counts": {
+            "0": 263,
+            "1": 39,
+            "2": 539,
+            "3": 4,
+            "4": 177
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4201.npz"
+        },
+        {
+          "record_id": "SC4202",
+          "subject_id": "SC420",
+          "night_id": "2",
+          "epochs": 1021,
+          "class_counts": {
+            "0": 215,
+            "1": 120,
+            "2": 479,
+            "3": 0,
+            "4": 207
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4202.npz"
+        },
+        {
+          "record_id": "SC4211",
+          "subject_id": "SC421",
+          "night_id": "1",
+          "epochs": 1578,
+          "class_counts": {
+            "0": 745,
+            "1": 106,
+            "2": 527,
+            "3": 49,
+            "4": 151
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4211.npz"
+        },
+        {
+          "record_id": "SC4212",
+          "subject_id": "SC421",
+          "night_id": "2",
+          "epochs": 808,
+          "class_counts": {
+            "0": 189,
+            "1": 87,
+            "2": 402,
+            "3": 43,
+            "4": 87
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4212.npz"
+        },
+        {
+          "record_id": "SC4231",
+          "subject_id": "SC423",
+          "night_id": "1",
+          "epochs": 904,
+          "class_counts": {
+            "0": 127,
+            "1": 139,
+            "2": 414,
+            "3": 12,
+            "4": 212
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4231.npz"
+        },
+        {
+          "record_id": "SC4232",
+          "subject_id": "SC423",
+          "night_id": "2",
+          "epochs": 1729,
+          "class_counts": {
+            "0": 916,
+            "1": 382,
+            "2": 213,
+            "3": 1,
+            "4": 217
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4232.npz"
+        },
+        {
+          "record_id": "SC4522",
+          "subject_id": "SC452",
+          "night_id": "2",
+          "epochs": 997,
+          "class_counts": {
+            "0": 283,
+            "1": 89,
+            "2": 530,
+            "3": 11,
+            "4": 84
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4522.npz"
+        },
+        {
+          "record_id": "SC4611",
+          "subject_id": "SC461",
+          "night_id": "1",
+          "epochs": 1652,
+          "class_counts": {
+            "0": 715,
+            "1": 123,
+            "2": 276,
+            "3": 139,
+            "4": 399
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4611.npz"
+        },
+        {
+          "record_id": "SC4612",
+          "subject_id": "SC461",
+          "night_id": "2",
+          "epochs": 1062,
+          "class_counts": {
+            "0": 208,
+            "1": 96,
+            "2": 479,
+            "3": 65,
+            "4": 214
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4612.npz"
+        },
+        {
+          "record_id": "SC4741",
+          "subject_id": "SC474",
+          "night_id": "1",
+          "epochs": 2210,
+          "class_counts": {
+            "0": 1229,
+            "1": 158,
+            "2": 610,
+            "3": 0,
+            "4": 213
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4741.npz"
+        },
+        {
+          "record_id": "SC4742",
+          "subject_id": "SC474",
+          "night_id": "2",
+          "epochs": 1063,
+          "class_counts": {
+            "0": 308,
+            "1": 207,
+            "2": 340,
+            "3": 0,
+            "4": 208
+          },
+          "file": "datasets\\sleep-edf-153-processed-v1\\test\\SC4742.npz"
+        }
+      ],
+      "epoch_count": 18036,
+      "class_counts": {
+        "0": 5819,
+        "1": 1880,
+        "2": 6546,
+        "3": 834,
+        "4": 2957
+      },
+      "subject_count": 8,
+      "record_count": 15
+    }
+  }
+}

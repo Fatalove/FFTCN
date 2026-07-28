@@ -1,0 +1,39 @@
+{
+  "milestone": 5,
+  "title": "1D-CNN temporal branch guided practice setup",
+  "status": "completed",
+  "date": "2026-07-13",
+  "python": "python",
+  "formal_exercise": "models/raw/sleep_edf_1d_cnn.py",
+  "focused_tests": "tests/test_sleep_edf_1d_cnn.py",
+  "learning_guide": "learning_guides/milestone_05/README.md",
+  "reference_solution": "learning_guides/milestone_05/reference_solution.py",
+  "reference_validation": {
+    "status": "passed",
+    "feature_shape": [4, 256],
+    "pretrain_logits_shape": [4, 5],
+    "first_convolution_gradient_finite": true,
+    "first_convolution_gradient_nonzero": true,
+    "reference_parameter_count": 402447,
+    "repository_parameter_count": 402447,
+    "repository_feature_shape": [4, 256],
+    "repository_pretrain_logits_shape": [4, 5]
+  },
+  "formal_exercise_validation": {
+    "status": "passed",
+    "focused_tests": "5/5 passed",
+    "regression_tests": "8/8 passed",
+    "feature_shape": [4, 256],
+    "pretrain_logits_shape": [4, 5],
+    "parameter_count": 402447,
+    "finite_nonzero_core_gradient": true
+  },
+  "test_contract_adjustment": {
+    "file": "tests/test_sleep_edf_1d_cnn.py",
+    "original_problem": "test required specific internal attribute names",
+    "change": "inspect module types and order independently of attribute names",
+    "experimental_semantics_changed": false
+  },
+  "formal_exercise_status": "user implementation accepted; Codex did not modify user core code",
+  "user_test_command": "python -m unittest tests.test_sleep_edf_1d_cnn -v"
+}

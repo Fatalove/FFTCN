@@ -1,0 +1,48 @@
+{
+  "milestone": 6,
+  "title": "2D-CNN time-frequency branch guided practice setup",
+  "status": "completed",
+  "date": "2026-07-14",
+  "python": "python",
+  "formal_exercise": "models/wavelet/sleep_edf_2d_cnn.py",
+  "focused_tests": "tests/test_sleep_edf_2d_cnn.py",
+  "learning_guide": "learning_guides/milestone_06/README.md",
+  "reference_solution": "learning_guides/milestone_06/reference_solution.py",
+  "reference_validation": {
+    "status": "passed",
+    "focused_tests": "5/5 passed",
+    "final_pool_shape": [4, 72, 1, 3],
+    "feature_shape": [4, 216],
+    "pretrain_logits_shape": [4, 5],
+    "first_convolution_gradient_finite": true,
+    "first_convolution_gradient_nonzero": true,
+    "reference_parameter_count": 198375,
+    "repository_parameter_count": 198375,
+    "repository_feature_shape": [4, 216],
+    "repository_pretrain_logits_shape": [4, 5]
+  },
+  "test_contract": "behavior and axis geometry; internal attribute names are not fixed",
+  "guide_revision": {
+    "reason": "the full core code needed novice-oriented line and shape explanations",
+    "files": [
+      "learning_guides/milestone_06/README.md",
+      "learning_guides/milestone_06/reference_solution.py"
+    ],
+    "readme_code_syntax": "passed",
+    "reference_tests_after_revision": "5/5 passed",
+    "experimental_semantics_changed": false
+  },
+  "formal_exercise_validation": {
+    "status": "passed",
+    "focused_tests": "5/5 passed",
+    "regression_tests": "13/13 passed",
+    "final_pool_shape": [4, 72, 1, 3],
+    "feature_shape": [4, 216],
+    "pretrain_logits_shape": [4, 5],
+    "parameter_count": 198375,
+    "repository_parameter_count": 198375,
+    "finite_nonzero_core_gradient": true
+  },
+  "formal_exercise_status": "user implementation accepted; Codex did not modify user core code",
+  "user_test_command": "python -m unittest tests.test_sleep_edf_2d_cnn -v"
+}

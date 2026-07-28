@@ -1,0 +1,179 @@
+{
+  "processed_root": "datasets\\sleep-edf-153-processed-v1",
+  "cache_root": "datasets\\sleep-edf-153-training-cache-v1",
+  "manifest_paths": {
+    "train": "datasets\\sleep-edf-153-training-cache-v1\\train\\manifest.json",
+    "validation": "datasets\\sleep-edf-153-training-cache-v1\\validation\\manifest.json",
+    "test": "datasets\\sleep-edf-153-training-cache-v1\\test\\manifest.json"
+  },
+  "balanced_manifest_path": "datasets\\sleep-edf-153-training-cache-v1\\pretrain_train\\manifest.json",
+  "elapsed_seconds": 2489.803807199991,
+  "free_disk_gib_before": 77.84,
+  "free_disk_gib_after": 64.29,
+  "cache_status": {
+    "complete": true,
+    "cache_root": "datasets\\sleep-edf-153-training-cache-v1",
+    "splits": {
+      "train": {
+        "complete": true,
+        "sample_count": 154128,
+        "expected_sample_count": 154128,
+        "files": {
+          "raw.npy": true,
+          "wave.npy": true,
+          "labels.npy": true,
+          "manifest.json": true
+        },
+        "arrays": {
+          "raw": {
+            "valid": true,
+            "shape": [
+              154128,
+              1,
+              3000
+            ],
+            "dtype": "float32"
+          },
+          "wave": {
+            "valid": true,
+            "shape": [
+              154128,
+              1,
+              30,
+              60
+            ],
+            "dtype": "float16"
+          },
+          "labels": {
+            "valid": true,
+            "shape": [
+              154128
+            ],
+            "dtype": "int64"
+          }
+        },
+        "records_cover_cache": true
+      },
+      "validation": {
+        "complete": true,
+        "sample_count": 23315,
+        "expected_sample_count": 23315,
+        "files": {
+          "raw.npy": true,
+          "wave.npy": true,
+          "labels.npy": true,
+          "manifest.json": true
+        },
+        "arrays": {
+          "raw": {
+            "valid": true,
+            "shape": [
+              23315,
+              1,
+              3000
+            ],
+            "dtype": "float32"
+          },
+          "wave": {
+            "valid": true,
+            "shape": [
+              23315,
+              1,
+              30,
+              60
+            ],
+            "dtype": "float16"
+          },
+          "labels": {
+            "valid": true,
+            "shape": [
+              23315
+            ],
+            "dtype": "int64"
+          }
+        },
+        "records_cover_cache": true
+      },
+      "test": {
+        "complete": true,
+        "sample_count": 18036,
+        "expected_sample_count": 18036,
+        "files": {
+          "raw.npy": true,
+          "wave.npy": true,
+          "labels.npy": true,
+          "manifest.json": true
+        },
+        "arrays": {
+          "raw": {
+            "valid": true,
+            "shape": [
+              18036,
+              1,
+              3000
+            ],
+            "dtype": "float32"
+          },
+          "wave": {
+            "valid": true,
+            "shape": [
+              18036,
+              1,
+              30,
+              60
+            ],
+            "dtype": "float16"
+          },
+          "labels": {
+            "valid": true,
+            "shape": [
+              18036
+            ],
+            "dtype": "int64"
+          }
+        },
+        "records_cover_cache": true
+      },
+      "pretrain_train": {
+        "complete": true,
+        "sample_count": 494617,
+        "expected_sample_count": 494617,
+        "files": {
+          "raw.npy": true,
+          "wave.npy": true,
+          "labels.npy": true,
+          "manifest.json": true
+        },
+        "arrays": {
+          "raw": {
+            "valid": true,
+            "shape": [
+              494617,
+              1,
+              3000
+            ],
+            "dtype": "float32"
+          },
+          "wave": {
+            "valid": true,
+            "shape": [
+              494617,
+              1,
+              30,
+              60
+            ],
+            "dtype": "float16"
+          },
+          "labels": {
+            "valid": true,
+            "shape": [
+              494617
+            ],
+            "dtype": "int64"
+          }
+        },
+        "records_cover_cache": true
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "label_map": {
+    "Sleep stage W": 0,
+    "Sleep stage 1": 1,
+    "Sleep stage 2": 2,
+    "Sleep stage 3": 3,
+    "Sleep stage 4": 3,
+    "Sleep stage R": 4
+  },
+  "invalid_labels": ["Movement time", "Sleep stage ?"],
+  "max_wake_epochs_each_side": 60,
+  "split_seed": 42,
+  "split_ratio": [0.8, 0.1, 0.1],
+  "split_subject_counts": {
+    "train": 62,
+    "validation": 8,
+    "test": 8
+  },
+  "reference_statistics": {
+    "raw_epochs": 416424,
+    "invalid_epochs_removed": 1463,
+    "excess_wake_epochs_removed": 219482,
+    "processed_epochs": 195479,
+    "processed_class_counts": {
+      "0": 65951,
+      "1": 21522,
+      "2": 69132,
+      "3": 13039,
+      "4": 25835
+    }
+  }
+}

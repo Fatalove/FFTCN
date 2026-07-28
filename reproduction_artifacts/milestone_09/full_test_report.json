@@ -1,0 +1,97 @@
+{
+  "claim_boundary": "这是 Sleep-EDF-153 固定受试者划分上的单数据集工程评估结果，不等同于论文十折交叉验证或三数据集完整复现。",
+  "metadata": {
+    "dataset_name": "Sleep-EDF-153",
+    "split_name": "test",
+    "split_strategy": "subject-disjoint fixed 62/8/8",
+    "random_seed": 0,
+    "checkpoint_path": "source_reproduction\\full_outputs\\MergeModel\\FFTCN\\best_network.pth",
+    "model_implementation": "original repository MergeSleepNet",
+    "checkpoint_origin": "milestone 1B full original-repository training",
+    "reconstructed_model_trained": false,
+    "training_run_reused": true,
+    "evaluation_purpose": "validate milestone 9 metric/report compatibility against milestone 1B predictions",
+    "python_version": "3.10.13",
+    "torch_version": "1.12.1",
+    "device": "cuda:0"
+  },
+  "overall": {
+    "accuracy": 0.7917977528089888,
+    "macro_f1": 0.7010606829000412,
+    "cohen_kappa": 0.7141909029366583
+  },
+  "per_class": [
+    {
+      "label": "W",
+      "support": 5583,
+      "precision": 0.968615984405458,
+      "recall": 0.8900232849722371,
+      "f1": 0.9276579856249416
+    },
+    {
+      "label": "N1",
+      "support": 1880,
+      "precision": 0.4325971058644326,
+      "recall": 0.3021276595744681,
+      "f1": 0.3557782649545882
+    },
+    {
+      "label": "N2",
+      "support": 6546,
+      "precision": 0.8095030514385353,
+      "recall": 0.8510540788267644,
+      "f1": 0.8297587131367292
+    },
+    {
+      "label": "N3",
+      "support": 834,
+      "precision": 0.4829329962073325,
+      "recall": 0.9160671462829736,
+      "f1": 0.6324503311258278
+    },
+    {
+      "label": "REM",
+      "support": 2957,
+      "precision": 0.7680608365019012,
+      "recall": 0.7514372675008455,
+      "f1": 0.7596581196581197
+    }
+  ],
+  "confusion_matrix": [
+    [
+      4969,
+      415,
+      64,
+      17,
+      118
+    ],
+    [
+      102,
+      568,
+      818,
+      97,
+      295
+    ],
+    [
+      4,
+      208,
+      5571,
+      505,
+      258
+    ],
+    [
+      0,
+      0,
+      70,
+      764,
+      0
+    ],
+    [
+      55,
+      122,
+      359,
+      199,
+      2222
+    ]
+  ]
+}

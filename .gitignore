@@ -1,0 +1,36 @@
+# 数据全部由公开下载与预处理脚本重建，仓库不携带任何数据实体或官方副本。
+datasets/
+
+# 里程碑 9B 的大模型 checkpoint；小型 history/JSON 报告保留为可复核证据。
+reproduction_artifacts/milestone_09b/real_run/preflight_training/**/*.pt
+reproduction_artifacts/milestone_09b/formal_seed_0/**/*.pt
+
+# Python 运行缓存。
+__pycache__/
+*.py[cod]
+
+# 代码导览阶段生成的小型数据、权重、曲线和指标。
+walkthrough/
+
+# JetBrains IDE 与本地 Codex/agent 配置只服务当前机器，不进入公开版本。
+.idea/
+.agents/
+.codex/
+
+
+
+# 原仓库路径复现实验产生的模型、曲线和指标文件是本地运行产物。
+source_reproduction/
+
+# 所有模型权重和二进制训练结果都不进入 Git 历史或 v0.1 release。
+*.pt
+*.pth
+*.npz
+*.xlsx
+
+# 论文与个人文献阅读/复现规划只作为本地学习资料，不随公开源码分发。
+背景
+
+
+# 上游 README 的生成 PDF 已由可维护的 Markdown 取代，本地副本不再发布。
+README.pdf

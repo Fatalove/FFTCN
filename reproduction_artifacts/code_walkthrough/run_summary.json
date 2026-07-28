@@ -1,0 +1,213 @@
+{
+  "notice": "教学贯通运行；仅 6 条记录、每阶段 1 轮，不代表论文复现指标。",
+  "device": "cuda:0",
+  "seed": 7,
+  "split_file_counts": {
+    "train": 3,
+    "valid": 1,
+    "test": 2
+  },
+  "batch_shapes": {
+    "raw_pretrain_input": [
+      16,
+      1,
+      3000
+    ],
+    "raw_pretrain_target": [
+      16
+    ],
+    "wave_pretrain_input": [
+      16,
+      1,
+      30,
+      60
+    ],
+    "wave_pretrain_target": [
+      16
+    ],
+    "merge_raw_input": [
+      1,
+      50,
+      1,
+      3000
+    ],
+    "merge_wave_input": [
+      1,
+      50,
+      1,
+      30,
+      60
+    ],
+    "merge_target": [
+      1,
+      50
+    ],
+    "merge_logits_flattened": [
+      100,
+      5
+    ],
+    "merge_targets_flattened": [
+      100
+    ]
+  },
+  "pipeline_shapes": {
+    "raw_epoch_flat": [
+      50,
+      1,
+      3000
+    ],
+    "raw_features": [
+      50,
+      256
+    ],
+    "wave_epoch_flat": [
+      50,
+      1,
+      30,
+      60
+    ],
+    "wave_features": [
+      50,
+      216
+    ],
+    "fused_sequence": [
+      1,
+      50,
+      472
+    ],
+    "tcn_features": [
+      1,
+      50,
+      128
+    ],
+    "logits_flattened": [
+      50,
+      5
+    ]
+  },
+  "parameter_counts": {
+    "raw_feature_net": 402447,
+    "wave_feature_net": 198375,
+    "complete_merge_net": 1189371
+  },
+  "demo_metrics": {
+    "accuracy": 0.03999999910593033,
+    "macro_f1": null,
+    "kappa": 0.008674101904034615
+  },
+  "checkpoints": {
+    "raw": "walkthrough\\outputs\\RawModel\\1D-CNN\\network.pth",
+    "wave": "walkthrough\\outputs\\WaveletModel\\2D-CNN\\network.pth",
+    "merge": "walkthrough\\outputs\\MergeModel\\FFTCN\\network.pth"
+  },
+  "timings": {
+    "raw_pretrain_seconds": 3.8293831999762915,
+    "wave_pretrain_seconds": 0.6666088000056334,
+    "merge_finetune_seconds": 0.6274144999915734,
+    "total_training_and_evaluation_seconds": 7.490104099997552
+  },
+  "demo_records": [
+    {
+      "record_id": "SC4001",
+      "start_epoch": 1468,
+      "shape": [
+        50,
+        1,
+        3000
+      ],
+      "class_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 5,
+        "3": 18,
+        "4": 25
+      },
+      "file": "walkthrough\\data\\SC4001.npz"
+    },
+    {
+      "record_id": "SC4002",
+      "start_epoch": 1085,
+      "shape": [
+        50,
+        1,
+        3000
+      ],
+      "class_counts": {
+        "0": 1,
+        "1": 2,
+        "2": 14,
+        "3": 32,
+        "4": 1
+      },
+      "file": "walkthrough\\data\\SC4002.npz"
+    },
+    {
+      "record_id": "SC4021",
+      "start_epoch": 1002,
+      "shape": [
+        50,
+        1,
+        3000
+      ],
+      "class_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 11,
+        "3": 7,
+        "4": 30
+      },
+      "file": "walkthrough\\data\\SC4021.npz"
+    },
+    {
+      "record_id": "SC4022",
+      "start_epoch": 1382,
+      "shape": [
+        50,
+        1,
+        3000
+      ],
+      "class_counts": {
+        "0": 1,
+        "1": 6,
+        "2": 40,
+        "3": 2,
+        "4": 1
+      },
+      "file": "walkthrough\\data\\SC4022.npz"
+    },
+    {
+      "record_id": "SC4031",
+      "start_epoch": 1457,
+      "shape": [
+        50,
+        1,
+        3000
+      ],
+      "class_counts": {
+        "0": 1,
+        "1": 2,
+        "2": 43,
+        "3": 3,
+        "4": 1
+      },
+      "file": "walkthrough\\data\\SC4031.npz"
+    },
+    {
+      "record_id": "SC4032",
+      "start_epoch": 999,
+      "shape": [
+        50,
+        1,
+        3000
+      ],
+      "class_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "file": "walkthrough\\data\\SC4032.npz"
+    }
+  ]
+}

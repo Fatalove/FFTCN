@@ -1,0 +1,36 @@
+{
+  "validated_at": "2026-07-08",
+  "status": "passed",
+  "unit_tests": {
+    "command": "python -m unittest tests.test_sleep_edf_preprocessor -v",
+    "passed": 4,
+    "failed": 0
+  },
+  "processed_dataset": {
+    "root": "datasets/sleep-edf-153-processed-v1",
+    "size_gib": 2.186,
+    "record_files": 153,
+    "unique_record_filenames": 153,
+    "subjects": 78,
+    "epochs": 195479,
+    "class_counts": {
+      "0": 65951,
+      "1": 21522,
+      "2": 69132,
+      "3": 13039,
+      "4": 25835
+    }
+  },
+  "splits": {
+    "train": {"subjects": 62, "records": 122, "epochs": 154128},
+    "validation": {"subjects": 8, "records": 16, "epochs": 23315},
+    "test": {"subjects": 8, "records": 15, "epochs": 18036}
+  },
+  "independent_checks": {
+    "subject_intersections": [0, 0, 0],
+    "npz_contract_issues": 0,
+    "wake_trim_issues": 0,
+    "class_count_matches_reference": true
+  },
+  "core_code_modified_by_codex_during_review": false
+}

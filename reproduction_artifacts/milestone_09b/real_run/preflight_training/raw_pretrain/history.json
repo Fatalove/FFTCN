@@ -1,0 +1,18 @@
+[
+  {
+    "epoch": 0,
+    "learning_rates": [
+      1e-05
+    ],
+    "train_loss": 1.2681844187681046,
+    "validation_loss": 1.4543107576439775
+  },
+  {
+    "epoch": 1,
+    "learning_rates": [
+      9.5e-06
+    ],
+    "train_loss": 1.1080701209694563,
+    "validation_loss": 1.4112430985332327
+  }
+]

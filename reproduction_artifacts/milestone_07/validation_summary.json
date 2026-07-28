@@ -1,0 +1,62 @@
+{
+  "milestone": 7,
+  "title": "Feature fusion and non-causal TCN user implementation validation",
+  "status": "completed",
+  "date": "2026-07-15",
+  "python": "python",
+  "formal_exercise": "models/merge/sleep_edf_fusion_tcn.py",
+  "focused_tests": "tests/test_sleep_edf_fusion_tcn.py",
+  "learning_guide": "learning_guides/milestone_07/README.md",
+  "reference_solution": "learning_guides/milestone_07/reference_solution.py",
+  "reference_validation": {
+    "status": "passed",
+    "focused_tests": "6/6 passed",
+    "noncausal_future_visibility": true,
+    "dilations": [1, 1, 2, 2, 4, 4, 8, 8],
+    "theoretical_receptive_field": 61,
+    "fused_shape": [2, 50, 472],
+    "tcn_shape": [2, 50, 128],
+    "logits_shape": [2, 50, 5],
+    "reference_parameter_count": 1189371,
+    "repository_parameter_count": 1189371,
+    "reference_tcn_parameter_count": 587904,
+    "repository_tcn_parameter_count": 587904,
+    "reference_output_interface": [2, 5, 5],
+    "repository_output_interface": [10, 5],
+    "gradient_reaches_raw_wave_and_tcn": true,
+    "guide_code_syntax": "passed"
+  },
+  "user_validation": {
+    "status": "passed",
+    "focused_tests": "6/6 passed",
+    "full_regression_tests": "26/26 passed",
+    "noncausal_future_visibility": true,
+    "dilations": [1, 1, 2, 2, 4, 4, 8, 8],
+    "fused_shape": [2, 50, 472],
+    "tcn_shape": [2, 50, 128],
+    "logits_shape": [2, 50, 5],
+    "gradient_reaches_raw_wave_and_tcn": true,
+    "total_parameter_count": 1189371,
+    "tcn_parameter_count": 587904,
+    "trainable_parameter_count": 1189371
+  },
+  "test_contract": "behavior, non-causality, shapes, dilations, gradients, and experiment semantics",
+  "oversampling_scope": {
+    "implemented_in_this_milestone": false,
+    "scheduled_milestone": 8,
+    "repository_function": "data.resample.offset_resample",
+    "enabled_for": [
+      "raw training-set pretraining with seq_len=1",
+      "wave training-set pretraining with seq_len=1"
+    ],
+    "disabled_for": [
+      "validation",
+      "test",
+      "merge fine-tuning with seq_len=50"
+    ],
+    "strictly_equalizes_class_counts": false,
+    "documentation_boundary_added": true
+  },
+  "formal_exercise_status": "user implementation passed validation",
+  "user_test_command": "python -m unittest tests.test_sleep_edf_fusion_tcn -v"
+}

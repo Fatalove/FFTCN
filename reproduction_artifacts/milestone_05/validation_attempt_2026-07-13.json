@@ -1,0 +1,34 @@
+{
+  "milestone": 5,
+  "date": "2026-07-13",
+  "status": "resolved_by_test_contract_adjustment",
+  "formal_exercise": "models/raw/sleep_edf_1d_cnn.py",
+  "codex_modified_user_core_code": false,
+  "focused_test_command": "python -m unittest tests.test_sleep_edf_1d_cnn -v",
+  "focused_test_result": {
+    "passed": 4,
+    "total": 5,
+    "blocking_test": "test_conv_block_shape_and_module_order",
+    "error": "AttributeError: 'Conv1dBlock' object has no attribute 'batch_norm'"
+  },
+  "review": {
+    "architecture_parameters_correct": true,
+    "feature_shape_passed": true,
+    "pretrain_logits_shape_passed": true,
+    "mode_independence_passed": true,
+    "finite_nonzero_gradient_passed": true,
+    "parameter_count": 402447,
+    "blocking_issue": "rename bn to batch_norm and relu to activation, including forward references"
+  },
+  "regression_result": {
+    "suite": "tests.test_sleep_edf_preprocessor tests.test_sleep_edf_cwt",
+    "passed": 8,
+    "total": 8
+  },
+  "resolution": {
+    "user_core_code_changed": false,
+    "test_file_changed": "tests/test_sleep_edf_1d_cnn.py",
+    "reason": "bn/relu and batch_norm/activation are equivalent internal names",
+    "final_focused_result": "5/5 passed"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "milestone": 4,
+  "title": "Morlet CWT practice setup",
+  "status": "completed",
+  "date": "2026-07-13",
+  "python": "python",
+  "generated_files": [
+    "data/sleep_edf_cwt.py",
+    "tests/test_sleep_edf_cwt.py",
+    "learning_guides/milestone_04/README.md",
+    "learning_guides/milestone_04/reference_solution.py",
+    "reproduction_artifacts/milestone_04/README.md",
+    "reproduction_artifacts/milestone_04/validation_summary.json"
+  ],
+  "reference_validation": {
+    "actual_shape": [1, 30, 60],
+    "actual_dtype": "float32",
+    "max_abs_error_vs_torch": 8.642673492431641e-07,
+    "mean_abs_error_vs_torch": 9.252793375935653e-08,
+    "allclose_rtol_atol_1e-5": true,
+    "random_finite": true,
+    "zero_finite": true,
+    "zero_min_max": [0.0, 0.0],
+    "constant_finite": true,
+    "constant_min_max": [0.0, 0.0]
+  },
+  "formal_exercise_status": "user implementation accepted; Codex made no changes to the core implementation",
+  "test_results": {
+    "focused_cwt": "4/4 passed",
+    "preprocessor_and_cwt_regression": "8/8 passed"
+  },
+  "test_commands": [
+    "python -m unittest tests.test_sleep_edf_cwt -v",
+    "python -m unittest tests.test_sleep_edf_preprocessor tests.test_sleep_edf_cwt -v"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "dataset": "Sleep-EDF Database Expanded",
+  "version": "1.0.0",
+  "subset": "sleep-cassette",
+  "source": "https://physionet.org/content/sleep-edfx/1.0.0/",
+  "download_mirror": "https://physionet-open.s3.amazonaws.com/sleep-edfx/1.0.0",
+  "psg_files": 153,
+  "hypnogram_files": 153,
+  "record_pairs": 153,
+  "subjects": 78,
+  "total_bytes": 7596565380,
+  "partial_files": 0,
+  "unpaired_records": 0,
+  "verification": "All 306 EDF files matched the official SHA256SUMS.txt"
+}

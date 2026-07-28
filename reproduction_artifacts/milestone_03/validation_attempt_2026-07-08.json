@@ -1,0 +1,23 @@
+{
+  "validated_at": "2026-07-08",
+  "status": "needs_revision",
+  "test_command": "python -m unittest tests.test_sleep_edf_preprocessor -v",
+  "tests_passed": 1,
+  "tests_failed_or_errored": 3,
+  "passed": [
+    "test_subject_split_is_reproducible_and_disjoint"
+  ],
+  "blocking_findings": [
+    {
+      "location": "data/sleep_edf_preprocessor.py:76",
+      "problem": "np.asarray receives a generator and raises TypeError instead of building int64 labels",
+      "learning_point": "Use a list comprehension with np.asarray, or use np.fromiter with dtype and count"
+    },
+    {
+      "location": "data/sleep_edf_preprocessor.py:153",
+      "problem": "output filename uses subject_id instead of record_id",
+      "learning_point": "Two nights share one subject_id, so subject-based filenames overwrite one another"
+    }
+  ],
+  "core_code_modified_by_codex": false
+}

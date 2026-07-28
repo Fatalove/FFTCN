@@ -1,0 +1,37 @@
+{
+  "validated_at": "2026-07-06",
+  "status": "passed",
+  "unit_tests": {
+    "command": "python -m unittest tests.test_sleep_edf_reader -v",
+    "passed": 2,
+    "failed": 0
+  },
+  "dataset_scan": {
+    "records": 153,
+    "subjects": 78,
+    "pairing_issues": 0,
+    "header_or_timeline_issues": 0,
+    "all_fpz_cz_sampling_rates_hz": 100,
+    "all_signal_lengths_divisible_by_3000": true,
+    "all_annotation_durations_divisible_by_30_seconds": true,
+    "annotation_blocks_extending_past_psg": 151,
+    "uncovered_or_overlapping_valid_epochs": 0
+  },
+  "full_read_samples": {
+    "SC4001": {
+      "subject_id": "SC400",
+      "night_id": "1",
+      "eeg_shape": [2650, 1, 3000]
+    },
+    "SC4822": {
+      "subject_id": "SC482",
+      "night_id": "2",
+      "eeg_shape": [2810, 1, 3000]
+    }
+  },
+  "review_notes": [
+    "The implementation passed the milestone contract without Codex modifying the reader.",
+    "Future production hardening should replace assert-based input validation with explicit exceptions.",
+    "Future production hardening should use context managers so EDF handles close when validation raises."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "milestone": 9,
+  "date": "2026-07-17",
+  "status": "needs_one_fix",
+  "user_implementation_existing_tests": "7/7 passed before contract strengthening",
+  "static_review": {
+    "label_preparation": "passed",
+    "confusion_matrix": "passed",
+    "classification_metrics": "passed",
+    "model_evaluation": "passed",
+    "report_metadata": "passed for numeric kappa",
+    "json_save": "passed for numeric kappa"
+  },
+  "blocking_contract": {
+    "case": "single-class true and predicted labels produce mathematically undefined kappa",
+    "metrics_value": null,
+    "expected_report_value": null,
+    "actual_error": "TypeError: float() argument must be a string or a real number, not 'NoneType'",
+    "location": "evaluation/sleep_edf_metrics.py build_evaluation_report",
+    "cause": "float(metrics.kappa) rejects the allowed None value",
+    "required_behavior": "preserve None so JSON serialization emits null"
+  },
+  "core_user_code_modified_by_codex": false
+}

@@ -34,7 +34,10 @@ class cwt:
         self.daughter = daughter * self.kp  # Heaviside step function
 
     def __call__(self, x, length):
-        x = torch.tensor(x, device=self.device)
+        if isinstance(x, torch.Tensor):
+            x = x.clone().detach().to(self.device)
+        else:
+            x = torch.tensor(x, device=self.device)
         f = torch.fft.fft(x)
         wave = torch.fft.ifft(f * self.daughter)
         spectrum = torch.log2(torch.abs(wave) ** 2 + 1e-10)

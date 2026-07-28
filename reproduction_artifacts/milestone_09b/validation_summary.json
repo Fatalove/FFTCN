@@ -1,0 +1,370 @@
+{
+  "milestone": "9B",
+  "title": "Reconstructed-model full-training validation",
+  "status": "completed",
+  "current_step": "milestone_acceptance_completed",
+  "date": "2026-07-25",
+  "python": "python",
+  "completed_step_1": {
+    "formal_exercise": "data/sleep_edf_training_cache.py",
+    "focused_tests": "4/4 passed",
+    "completed_module_regression": "43/43 passed",
+    "correctness_guard": "raw input must be [N,1,3000] before memmap allocation and write, preventing silent NumPy broadcasting",
+    "learning_guide": "learning_guides/milestone_09b/README.md",
+    "reference_solution": "learning_guides/milestone_09b/reference_solution.py"
+  },
+  "completed_step_2": {
+    "formal_exercise": "training/sleep_edf_full_run.py",
+    "completed_user_work": [
+      "FullTrainingConfig.to_metadata",
+      "load_record_spans",
+      "build_sequence_positions",
+      "SleepEDFSequenceDataset",
+      "build_reproducible_loader"
+    ],
+    "completed_user_scope": [
+      "complete load_record_spans",
+      "implement build_sequence_positions",
+      "implement SleepEDFSequenceDataset",
+      "implement build_reproducible_loader"
+    ],
+    "focused_tests": "tests/test_sleep_edf_full_run.py",
+    "learning_guide": "learning_guides/milestone_09b/STEP_02_DATASET_DATALOADER.md",
+    "reference_solution": "learning_guides/milestone_09b/reference_data_loading.py",
+    "reference_tests": "5/5 passed",
+    "user_implementation_tests": "5/5 passed",
+    "guide_python_blocks": "7/7 compiled",
+    "formal_status": "internal step self-test completed; included in the passed milestone 9B acceptance"
+  },
+  "completed_step_3": {
+    "formal_exercise": "training/sleep_edf_full_run.py",
+    "user_scope": [
+      "_balanced_record_count",
+      "build_balanced_pretrain_cache",
+      "run_epoch",
+      "save_stage_checkpoint and load_stage_checkpoint",
+      "fit_stage",
+      "_resolve_device",
+      "run_two_stage_training",
+      "run_full_training"
+    ],
+    "focused_tests": "tests/test_sleep_edf_training_orchestration.py",
+    "learning_guide": "learning_guides/milestone_09b/STEP_03_TRAINING_ORCHESTRATION.md",
+    "reference_solution": "learning_guides/milestone_09b/reference_training_orchestration.py",
+    "reference_tests": "6/6 passed",
+    "reference_backed_full_suite": "69/69 passed",
+    "guide_python_blocks": "3/3 compiled",
+    "interface_sync": "formal exercise, guide, and reference expose the same nine step-3 functions, including both private helpers",
+    "user_implementation_tests": "6/6 passed",
+    "formal_status": "internal step self-test completed; included in the passed milestone 9B acceptance"
+  },
+  "completed_step_4": {
+    "formal_exercise": "training/sleep_edf_formal_experiment.py",
+    "user_scope": [
+      "seed_experiment",
+      "build_all_caches",
+      "overfit_single_batch",
+      "evaluate_fusion_best",
+      "build_formal_report",
+      "run_formal_experiment"
+    ],
+    "focused_tests": "tests/test_sleep_edf_formal_experiment.py",
+    "learning_guide": "learning_guides/milestone_09b/STEP_04_PREFLIGHT_FORMAL_EXPERIMENT.md",
+    "reference_solution": "learning_guides/milestone_09b/reference_formal_experiment.py",
+    "reference_tests": "7/7 passed",
+    "reference_backed_full_suite": "59/59 passed",
+    "user_implementation_tests": "7/7 passed",
+    "user_implementation_full_suite": "59/59 passed",
+    "guide_python_blocks": "2/2 compiled",
+    "interface_sync": "formal exercise, guide, and reference expose the same three result dataclasses and six step-4 functions",
+    "review_fix": "moved CUDA peak-memory reset before the fixed-batch update loop so the measured peak covers forward, backward, and optimizer work",
+    "test_contract_fix": "normalized semantically equivalent positional and keyword calls instead of enforcing one calling style",
+    "formal_status": "internal code, full cache, real-batch, epoch, resume, formal training, one-time test, report review, and whole-milestone acceptance completed"
+  },
+  "real_run_operator": {
+    "runner": "scripts/run_milestone_09b.py",
+    "operator_guide": "learning_guides/milestone_09b/OPERATOR_GUIDE.md",
+    "fixed_stage_order": [
+      "cache",
+      "overfit",
+      "epoch1",
+      "resume2",
+      "formal"
+    ],
+    "recovery_commands": [
+      "epoch1-resume",
+      "formal-resume"
+    ],
+    "user_operated_boundary": "All full-cache writes and real model updates are started by the user one stage at a time; Codex prepares commands and reviews artifacts.",
+    "processed_record_counts": {
+      "train": 122,
+      "validation": 16,
+      "test": 15
+    },
+    "cache_expected_sample_counts": {
+      "train": 154128,
+      "validation": 23315,
+      "test": 18036,
+      "pretrain_train": 494617
+    },
+    "runner_tests": "8/8 passed",
+    "full_short_test_suite": "69/69 passed",
+    "status_check": "On 2026-07-25 all four caches, every preflight, formal 20/20/50 history, best/last checkpoints, and formal_test_report.json passed their fixed checks; no milestone-9B Python process remains active.",
+    "foreground_progress": "cache shows one continuous tqdm bar with the active split and CWT epoch count; each training stage prints one separated title, then fixed-width train and validation tqdm bars begin with current/total epoch and update cumulative position-weighted loss and accuracy by batch; status remains an optional side-channel check",
+    "fixed_experiment": "seed 0; offset 300; T=50; epochs 20/20/50; batch sizes 128/128/32; learning rates 1e-5; feature scale 1e-2; gamma 0.95; num_workers 0",
+    "resume_boundary": "Preflight 1-to-2 epochs reuses preflight_training; formal starts in a separate fresh formal_seed_0 directory and only resumes inside that directory.",
+    "resume_reproducibility_limit": "Existing checkpoints restore model, optimizer, scheduler, epoch, and history but do not restore Python/NumPy/PyTorch/DataLoader RNG state; resumed trajectories are not claimed to match uninterrupted training element by element.",
+    "formal_test_guard": "An existing formal report blocks rerun; completed 20/20/50 histories without a report also block automatic resume because test-start state is ambiguous."
+  },
+  "step_2_test_contract": [
+    "configuration metadata remains JSON serializable",
+    "manifest intervals and sequence positions never cross record boundaries",
+    "sequence_length=1 returns model-ready raw/wave branch shapes and dtypes; both is used with sequence_length=50",
+    "each record tail is dropped independently for longer sequences",
+    "same local DataLoader seed produces the same shuffle order"
+  ],
+  "step_3_test_contract": [
+    "offset oversampling is applied inside each record and wave is computed from the exact balanced raw",
+    "epoch loss is weighted by the number of target positions",
+    "validation alone selects best while last checkpoint restores optimizer, scheduler, cursor, and history",
+    "raw and wave validation-best weights are transferred before fusion fine-tuning",
+    "each fit-stage prints its stage title once; train and validation progress lines begin with epoch, use the actual batch iterables, and update cumulative position-weighted loss and accuracy after every batch without a second model forward",
+    "CPU checkpoints restored for CUDA training place the model before optimizer loading so Adam exp_avg and exp_avg_sq share the parameter device"
+  ],
+  "step_4_test_contract": [
+    "Python, NumPy, and PyTorch random draws repeat after reseeding",
+    "train, validation, test, and balanced pretrain caches preserve raw/wave/label sample-axis alignment",
+    "repeated optimization on one fixed batch reduces loss; CUDA peak memory is reset before updates and read after all updates",
+    "resume mappings reach the two-stage trainer and all training datasets are closed",
+    "formal test loads the selected fusion checkpoint and closes test memmaps",
+    "the report records configuration, split semantics, curves, runtime, peak VRAM, checkpoint sources, and the compacted-timeline limitation",
+    "the formal runner evaluates the fusion validation-best checkpoint exactly once per formal run"
+  ],
+  "step_2_comment_quality_audit": {
+    "standard": "learning_guides/COMMENT_QUALITY_GATE.md",
+    "status": "passed",
+    "interface_semantics": "passed",
+    "every_parameter_has_upstream_source": "passed",
+    "return_values_have_downstream_destination": "passed",
+    "tight_code_fragments_explain_what_and_why": "passed",
+    "variable_origins": "passed",
+    "accumulator_counter_cursor_initialization_is_explained": "passed",
+    "shape_and_axis_semantics": "passed",
+    "record_local_index_mapping": "passed",
+    "dtype_and_memmap_transitions": "passed",
+    "framework_and_rng_state": "passed",
+    "return_value_semantics": "passed",
+    "core_scope_is_concise": "passed",
+    "formal_guide_reference_interface_sync": "passed",
+    "manual_review_note": "The complete-code section and reference were read from start to finish. Comments retain record/global indices, actual T=1 branch versus T=50 fusion axes, memmap copy and dtype boundaries, input tuple ordering, Windows close behavior, and local torch.Generator semantics; workflow inventories, optional hardening lists, empty-record rejection, and duplicate cache-shape checks were removed."
+  },
+  "step_3_comment_quality_audit": {
+    "standard": "learning_guides/COMMENT_QUALITY_GATE.md",
+    "status": "passed",
+    "interface_semantics": "passed",
+    "tight_code_fragments_explain_what_and_why": "passed",
+    "variable_origins": "passed",
+    "shape_and_axis_semantics": "passed",
+    "framework_state_and_device_transitions": "passed",
+    "checkpoint_field_and_resume_semantics": "passed",
+    "return_value_semantics": "passed",
+    "core_scope_is_concise": "passed",
+    "formal_guide_reference_interface_sync": "passed",
+    "manual_review_note": "The complete-code section, reference, and formal exercise annotations were read from start to finish under the 2026-07-22 causal-comment standard. Every step-3 function now identifies each parameter's upstream creator and the return value's downstream consumer. Intermediate accumulators, counters, cursor, paths, learning-rate snapshots, best/last state, device movement, raw/wave/label indexing, and memmap lifetime explain both what they hold and why the algorithm needs them. The run_epoch worked example explicitly maps weighted_loss to the numerator and position_count to the denominator. No duplicate production-hardening checks were added."
+  },
+  "step_4_comment_quality_audit": {
+    "standard": "learning_guides/COMMENT_QUALITY_GATE.md",
+    "status": "passed",
+    "interface_semantics": "passed",
+    "every_parameter_has_upstream_source": "passed",
+    "return_values_have_downstream_destination": "passed",
+    "tight_code_fragments_explain_what_and_why": "passed",
+    "variable_origins": "passed",
+    "timers_loss_traces_and_memory_counters_are_explained": "passed",
+    "framework_rng_eval_device_and_memmap_state": "passed",
+    "checkpoint_selection_and_test_boundary": "passed",
+    "json_type_conversions": "passed",
+    "core_scope_is_concise": "passed",
+    "formal_guide_reference_interface_sync": "passed",
+    "manual_review_note": "The step-4 complete-code section and independent reference were read from imports through the final result. Each parameter names its upstream creator and downstream consumer. Comments explain why three RNGs are seeded, why timers and loss histories need independent variables, why CUDA peak stats are reset, why test data is opened only after validation selection, why best and last have different roles, and why paths, NumPy counts, runtime, and memory are converted before JSON output. The main path adds only the correctness-critical positive-step check; CLI, schema, cache hashes, worker hardening, and auto-recovery are excluded from the core lesson."
+  },
+  "source_alignment": "Original data/loader.py offset-resamples raw inside each record before computing wave. Step 3 preserves that order by materializing aligned balanced raw/labels/wave, while retaining the reconstructed local RNG and record boundaries.",
+  "storage_decision": {
+    "strategy": "materialize full balanced pretrain_train raw, wave, labels, and manifest cache",
+    "estimated_balanced_cache_gib": 7.19,
+    "estimated_total_new_cache_gib": 10.0,
+    "target_drive": "D",
+    "free_space_before_build_gib": 77.84,
+    "estimated_free_space_after_all_new_caches_gib": 65.69,
+    "reported_free_space_after_build_gib": 64.29,
+    "actual_cache_build_seconds": 2489.803807199991,
+    "cache_report": "reproduction_artifacts/milestone_09b/real_run/cache_build.json",
+    "memory_behavior": "record-local processing with memmap; 7.19 GiB is disk use, not a same-sized RAM allocation"
+  },
+  "step_4_resource_preflight": {
+    "date": "2026-07-22",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB",
+    "cwt_benchmark_seconds_per_epoch": 0.005412,
+    "estimated_total_cwt_epochs": 690096,
+    "estimated_cwt_hours": 1.04,
+    "single_step_peak_allocated_mib": {
+      "raw_batch_128": 37.49,
+      "wave_batch_128": 209.71,
+      "fusion_batch_32_sequence_50": 2870.12
+    },
+    "interpretation": "default source-compatible batch sizes fit the preliminary allocation check; the subsequent real-data overfit preflight also completed at fusion batch 32 and sequence length 50"
+  },
+  "real_overfit_preflight": {
+    "date": "2026-07-24",
+    "device": "cuda",
+    "steps_per_stage": 20,
+    "loss_first_to_last": {
+      "raw": [1.7278625965118408, 1.6768288612365723],
+      "wave": [1.7577202320098877, 1.3287122249603271],
+      "fusion": [1.7120323181152344, 1.5478225946426392]
+    },
+    "peak_cuda_memory_mib": {
+      "raw_batch_128": 41.845703125,
+      "wave_batch_128": 212.044921875,
+      "fusion_batch_32_sequence_50": 2882.1748046875
+    },
+    "shape_contract": "raw [128,1,3000] -> [128]; wave [128,1,30,60] -> [128]; fusion raw/wave [32,50,...] -> labels [32,50]",
+    "result": "passed; all 60 losses are finite and every stage has last_loss < first_loss",
+    "next_stage": "epoch1_completed"
+  },
+  "real_epoch1_preflight": {
+    "date": "2026-07-24",
+    "epochs": {
+      "raw_pretrain": [0],
+      "wave_pretrain": [0],
+      "fusion_finetune": [0]
+    },
+    "batch_counts": {
+      "raw_pretrain": {"train": 3865, "validation": 183},
+      "wave_pretrain": {"train": 3865, "validation": 183},
+      "fusion_finetune": {"train": 95, "validation": 15}
+    },
+    "losses": {
+      "raw_pretrain": {"train": 1.2681844187681046, "validation": 1.4543107576439775},
+      "wave_pretrain": {"train": 1.0152624534214356, "validation": 0.9607371967492788},
+      "fusion_finetune": {"train": 1.4246782451808886, "validation": 1.1612338874017307}
+    },
+    "checkpoint_contract": "every stage has readable best.pt and last.pt at epoch 0; best and last model states match after the first epoch; histories match epoch1.json",
+    "next_learning_rates": {
+      "raw_pretrain": [9.5e-06],
+      "wave_pretrain": [9.5e-06],
+      "fusion_finetune": [9.5e-06, 9.5e-08, 9.5e-08]
+    },
+    "result": "passed",
+    "next_stage": "resume2"
+  },
+  "resume_device_regression": {
+    "date": "2026-07-24",
+    "observed_failure": "the first raw batch reached optimizer.step but could not complete because CUDA gradients and restored CPU Adam momentum were mixed",
+    "cause": "fit_stage previously moved the model only inside run_epoch, after optimizer.load_state_dict had already placed exp_avg and exp_avg_sq according to CPU parameters",
+    "fix": "fit_stage now moves the model to the resolved training device before loading model, optimizer, and scheduler checkpoint state",
+    "artifact_impact": "no resume2.json or completed epoch was written; the verified epoch-0 best.pt, last.pt, and history remain the valid resume source",
+    "verification": "formal and independent-reference focused suites passed 6/6 each; default and reference-backed full short suites passed 69/69 each; a real CUDA regression restored a CPU Adam checkpoint, completed epoch 1, and confirmed exp_avg plus exp_avg_sq on CUDA",
+    "result": "code path fixed and the user-operated real resume2 rerun completed successfully",
+    "next_stage": "formal"
+  },
+  "real_resume2_preflight": {
+    "date": "2026-07-24",
+    "epochs": {
+      "raw_pretrain": [0, 1],
+      "wave_pretrain": [0, 1],
+      "fusion_finetune": [0, 1]
+    },
+    "epoch_1_losses": {
+      "raw_pretrain": {"train": 1.1080701209694563, "validation": 1.4112430985332327},
+      "wave_pretrain": {"train": 0.8979817171799183, "validation": 0.9149619293448088},
+      "fusion_finetune": {"train": 0.9476783825103058, "validation": 0.8826112632668175}
+    },
+    "checkpoint_contract": "every stage has readable best.pt and last.pt at epoch 1; epoch 1 improved validation for all stages, so best and last model states match; report, disk, best, and last histories agree",
+    "scheduler_last_epoch": {
+      "raw_pretrain": 2,
+      "wave_pretrain": 2,
+      "fusion_finetune": 2
+    },
+    "next_learning_rates": {
+      "raw_pretrain": [9.025e-06],
+      "wave_pretrain": [9.025e-06],
+      "fusion_finetune": [9.025e-06, 9.025e-08, 9.025e-08]
+    },
+    "foreground_progress": "all six train/validation bars completed and retained their final cumulative position-weighted avg_loss",
+    "formal_output_state": "formal_seed_0 does not exist, so formal can start from a fresh seed-0 initialization without preflight checkpoint reuse",
+    "result": "passed",
+    "next_stage": "formal"
+  },
+  "formal_acceptance": {
+    "date": "2026-07-25",
+    "result": "passed",
+    "formal_report": "reproduction_artifacts/milestone_09b/formal_seed_0/formal_test_report.json",
+    "training_epochs": {
+      "raw_pretrain": 20,
+      "wave_pretrain": 20,
+      "fusion_finetune": 50
+    },
+    "validation_best_epochs": {
+      "raw_pretrain": 19,
+      "wave_pretrain": 18,
+      "fusion_finetune": 48
+    },
+    "validation_best_losses": {
+      "raw_pretrain": 0.9389769994468615,
+      "wave_pretrain": 0.6985922802218086,
+      "fusion_finetune": 0.4582267866905079
+    },
+    "test_evaluated_positions": 17800,
+    "overall_metrics": {
+      "accuracy": 0.7941573033707865,
+      "macro_f1": 0.7055190241629967,
+      "cohen_kappa": 0.716952082676455
+    },
+    "per_class_support": {
+      "W": 5583,
+      "N1": 1880,
+      "N2": 6546,
+      "N3": 834,
+      "REM": 2957
+    },
+    "runtime": {
+      "cache_build_seconds": 2489.803807199991,
+      "training_seconds": 2657.7651055000024,
+      "peak_cuda_memory_mib": 2903.05859375
+    },
+    "checkpoint_selection": "fusion_finetune/best.pt selected only by minimum validation loss at epoch 48",
+    "formal_test_evaluations": 1,
+    "artifact_consistency": "disk histories exactly match report and best/last checkpoint histories; checkpoint stage/config/epoch fields and scheduler learning rates are consistent",
+    "metric_recalculation": "accuracy, macro-F1, Cohen kappa, all per-class precision/recall/F1/support, and the 17800-position total were independently recomputed from the saved confusion matrix",
+    "cache_and_sequence_audit": "all four mmap caches have aligned sample axes and expected dtypes; T=50 sequences remain within record boundaries; subject sets are disjoint 62/8/8",
+    "implementation_boundary": "formal imports use only teaching-rebuild modules and general dependencies; no original trainer, original checkpoint, or reference solution enters the training path",
+    "state_dict_transfer": "raw and wave validation-best checkpoints are loaded and transferred before fusion fine-tuning",
+    "final_regression": "69/69 short tests passed in python after the final reference-interface fix",
+    "reference_regression": "step references passed 4/4, 5/5, 6/6, and 7/7; 17 guide Python blocks compiled",
+    "three_copy_interface_audit": "21 callable contracts plus FullTrainingConfig fields match across formal exercise, complete guide code, and independent references",
+    "comment_quality": "all four teaching steps retain their previously passed manual COMMENT_QUALITY_GATE review; the final offset_samples reference-field fix includes its upstream and semantic role",
+    "reference_fix": "reference_data_loading.FullTrainingConfig was missing offset_samples although the formal config and guide used it; the field was restored without changing training or experiment semantics",
+    "claim_boundary": "single seed and one fixed Sleep-EDF-153 subject split; not paper ten-fold validation, not multi-seed stability, and not a three-dataset reproduction",
+    "known_sequence_limitation": "110 of 3836 T=50 sequences cross at least one removed internal epoch gap (2.87%)"
+  },
+  "remaining_stage_performance_audit": {
+    "date": "2026-07-24",
+    "scope": "read-only real-cache loading plus forward/backward timing without optimizer.step; parameters remained unchanged",
+    "source_comparison": "The source DataLoader also uses num_workers=0. Both the source and reconstructed training paths now report progress from the actual batch iterable; the reconstructed path separates train and validation bars and includes current/total epoch in each description.",
+    "steady_batch_seconds": {
+      "raw_loader_batch_128": 0.0217,
+      "raw_forward_backward_without_step": 0.0056,
+      "wave_loader_batch_128": 0.0091,
+      "wave_forward_backward_without_step": 0.0297,
+      "fusion_loader_batch_32_sequence_50": 0.0614,
+      "fusion_forward_backward_without_step": 2.1201
+    },
+    "conclusion": "No training path repeated the cache builder's serial per-epoch CWT bottleneck. Raw loading remains an optional optimization candidate; wave and especially fusion were compute-dominated. The later formal 20/20/50 run completed and passed milestone acceptance."
+  },
+  "experiment_semantics": "The teaching reconstruction completed the full four-split cache, all real-data preflights, fixed-seed 20/20/50 training, validation-only checkpoint selection, and one formal test. The resulting metrics are a single-dataset, single-seed engineering result and do not establish paper ten-fold or multi-seed performance.",
+  "user_test_command": "python -m unittest tests.test_sleep_edf_formal_experiment -v",
+  "operator_test_command": "python -m unittest tests.test_milestone_09b_runner -v",
+  "status_command": "python scripts\\run_milestone_09b.py status",
+  "acceptance_policy": "Step tests are development self-checks. Milestone 9B was marked completed only after its full experiment, one-time test, artifacts, regressions, interface synchronization, comment gate, and claim boundary passed one whole-milestone review."
+}
